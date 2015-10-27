@@ -4,7 +4,7 @@ $this->title = 'Земляничные поляны';
 use yii\helpers\Html;
 use frontend\assets\TabAsset;
 use frontend\assets\IeAsset;
-use yii\widgets\ActiveForm;
+
 
 
 TabAsset::register($this);

@@ -96,4 +96,5 @@ class PageController extends Controller
         return $this->render('village_1');
     }
 
+
 }

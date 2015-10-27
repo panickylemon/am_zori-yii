@@ -68,6 +68,11 @@ class District extends \yii\db\ActiveRecord
         return Yii::$app->params['frontendUrl'].'/uploads/'.str_replace(".", "_thumb.", $this->image);
     }
 
+    public function getThumburl2()
+    {
+        return Yii::$app->params['frontendUrl'].'/uploads/'.str_replace(".", "_thumb2.", $this->image);
+    }
+
     public function getVillage()
     {
         return $this->hasOne(Village::className(), ["id" => "village_id"]);
