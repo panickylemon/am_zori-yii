@@ -426,69 +426,6 @@ IeAsset::register($this);
 						<?php ActiveForm::end(); ?>
 
 
-						<!--						-->
-						<!--						<form name="review_form" action="" method="post">-->
-						<!---->
-						<!--							<div class="form_line_element">-->
-						<!--								<div class="form_text">Имя <sup>*</sup></div>-->
-
-						<!--								<div class="form_element"><input type="text" value="" name="firstname"-->
-						<!--								                                 class="firstname field_incorrect">
-																</div>-->
-
-						<!--								<div class="form_element_result"></div>-->
-
-						<!--								<div class="firstname_error_text form_error_text">-->
-						<!--									Введите имя длиной от 2 до 32 символов на кириллице или латинице-->
-						<!--								</div>-->
-						<!--							</div>-->
-						<!---->
-						<!--							<div class="form_line_element">-->
-						<!--								<div class="form_text">Отчество</div>-->
-						<!--								<div class="form_element"><input type="text" value="" name="middlename"-->
-						<!--								                                 class="middlename"></div>-->
-						<!--								<div class="form_element_result"></div>-->
-						<!--								<div class="middlename_error_text form_error_text">-->
-						<!--									Введите отчество длиной от 2 до 32 символов на кириллице или латинице-->
-						<!--								</div>-->
-						<!--							</div>-->
-						<!---->
-						<!--							<div class="form_line_element">-->
-						<!--								<div class="form_text">Фамилия</div>-->
-						<!--								<div class="form_element"><input type="text" value="" name="lastname"-->
-						<!--								                                 class="lastname"></div>-->
-						<!--								<div class="form_element_result"></div>-->
-						<!--								<div class="lastname_error_text form_error_text">-->
-						<!--									Введите фамилию длиной от 2 до 32 символов на кириллице или латинице-->
-						<!--								</div>-->
-						<!--							</div>-->
-						<!---->
-						<!--							<div class="form_line_element">-->
-						<!--								<div class="form_text">№ участка (если являетесь жителем данного посёлка)</div>-->
-						<!--								<div class="form_element"><input type="number" value="" name="locality" min="1"-->
-						<!--								                                 class="locality"></div>-->
-						<!--								<div class="form_element_result"></div>-->
-						<!--								<div class="locality_error_text form_error_text">-->
-						<!--									Введите номер Вашего участка-->
-						<!--								</div>-->
-						<!--							</div>-->
-						<!---->
-						<!--							<div class="form_line_element text_review">-->
-						<!--								<div class="form_text">Ваш отзыв <sup>*</sup></div>-->
-						<!--								<div class="form_element"><textarea name="my_review"-->
-						<!--								                                    class="my_review field_incorrect"></textarea></div>-->
-						<!--								<div class="form_element_result"></div>-->
-						<!--								<div class="my_review_error_text form_error_text">-->
-						<!--									Введите текст от 10 до 1500 символов на кириллице-->
-						<!--								</div>-->
-						<!--							</div>-->
-						<!---->
-						<!--							<div class="form_line_element form_center ">-->
-						<!--								<input class="submit_review" type="submit" value="Отправить">-->
-						<!---->
-						<!--							</div>-->
-						<!---->
-						<!--						</form>-->
 					</div>
 
 

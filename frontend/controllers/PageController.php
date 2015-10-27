@@ -91,9 +91,9 @@ class PageController extends Controller
         return $this->render('contacts');
     }
 
-//    public function actionVillage_1()
-//    {
-//        return $this->render('village_1');
-//    }
+    public function actionVillage_1()
+    {
+        return $this->render('village_1');
+    }
 
 }

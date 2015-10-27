@@ -25,6 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'id',
+            'village_id',
+            'number',
+            'size',
+            'price',
+            'date_ready',
+            'is_sold',
+            'is_house',
             'image' => [
                 'label' => 'Image',
                 'format' => 'raw',
@@ -33,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         return "";
                     }
                     return Html::img($data->thumburl,[
-                        'alt'=>'yii2 - картинка в gridview',
+                        'alt'=>'фото',
                         'style' => 'width:150px;'
                     ]);
                 },

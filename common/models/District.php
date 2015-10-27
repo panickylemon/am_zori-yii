@@ -37,7 +37,7 @@ class District extends \yii\db\ActiveRecord
             [['village_id', 'number', 'size', 'price', 'date_ready', 'image'], 'required'],
             [['village_id', 'number', 'size', 'price', 'is_sold', 'is_house'], 'integer'],
             [['date_ready'], 'string', 'max' => 50],
-            [['image'], 'file', 'extensions'=>'jpg, gif, png'],
+            [['image'], 'file', 'extensions'=>'jpg, jpeg, gif, png'],
         ];
     }
 
