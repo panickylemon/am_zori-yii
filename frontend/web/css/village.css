@@ -1,0 +1,25 @@
+.es-carousel-wrapper {border-radius: 0;
+	background: #949494;
+	box-shadow:none;
+	padding:5px 20px;
+	margin-bottom: 5px;}
+
+.es-nav span{left: 5px;}
+
+.es-nav span.es-nav-next {
+	right: 5px;}
+
+.rg-image-wrapper{border-radius: 0;
+	padding: 15px 29px 1px;}
+
+.rg-image-nav a{border-radius: 0;}
+
+.rg-image-nav a.rg-image-nav-next{border-radius: 0;}
+
+.rg-caption p{margin-top: 0px;
+	display: none;}
+
+.resp-tabs-list li{padding: 14px 25px;
+	margin-right: 1px;}
+
+
