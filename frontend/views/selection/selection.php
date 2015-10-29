@@ -107,8 +107,13 @@ RangeAsset::register($this);
 
 					<div class="filter_elements">Статус
 						<div class="filter_village">
-							<input type="checkbox" name="status" value="not_for_sale" checked>Продан<br>
-							<input type="checkbox" name="status" value="sale">В продаже<br>
+							<input type="checkbox" name="is_sold[]" value="1" <?php if (in_array('1', $status)){ echo
+								"checked"; }
+							?>>Продан<br>
+
+							<input type="checkbox" name="is_sold[]" value="0" <?php if (in_array('0', $status)){ echo
+							"checked"; }
+							?>>В продаже<br>
 						</div>
 					</div>
 

@@ -20,20 +20,25 @@ class SelectionController extends Controller
 
 	public function actionSelection()
 	{
+		$request = Yii::$app->request;
 
 		$query = District::find();
 
+
+
+		$status = $request->get('is_sold', array());
+
+		if ($status == array('0') || $status == array('1')) {
+			$query = $query
+			->where(['is_sold' => $status]);
+		}
+
 		$districts = $query->all();
-
-		$request = Yii::$app->request;
-
-		$get = $request->get();
 
 		return $this->render('selection', [
 			'districts' => $districts,
-			'get' => $get,
+			'status'=>$status,
 		]);
-
 
 	}
 
