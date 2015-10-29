@@ -3,7 +3,9 @@ $this->title = 'Подбор участка';
 
 use yii\helpers\Html;
 use frontend\assets\RangeAsset;
+use common\models\Village;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 
 
 RangeAsset::register($this);
@@ -73,72 +75,72 @@ RangeAsset::register($this);
 		</div>
 
 		<div class="selection_layout">
+
 			<div class="filter_box">
 				<h4>Поиск по характеристикам</h4>
 
-				<?php $form = ActiveForm::begin([
-					'id' => 'form-selection',
-					'options' => [
-						//'class' => '',
-						//'name' => ' ',
-					],
-				]); ?>
+				<form method="get">
 
-				<div class="filter_elements">Посёлки
-					<div class="filter_village">
-						<!--						--><?php //$form->field($model, 'village')
-						//							->checkboxList([
-						//								'zeml_pol' => 'Земляничные поляны',
-						//								'ros_slob' => 'Рощинская слобода',
-						//								'medovoe' => 'Медовое',
-						//							]);?>
+					<div class="filter_elements">Посёлки
+						<div class="filter_village">
 
-						<input type="checkbox" name="village" value="zeml_pol" checked>Земляничные поляны<br>
-						<input type="checkbox" name="village" value="ros_slob">Рощинская слобода<br>
-						<input type="checkbox" name="village" value="medovoe">Медовое<br>
+							<?php $villages = ArrayHelper::map(Village::find()->orderBy('name')->all(), 'id',
+								'name') ?>
+							<?= Html::checkboxList('village_id', null, $villages,['itemOptions'=>['class' =>
+								'selection_checkbox']]) ?>
+
+
+<!--							<input type="checkbox" name="village" value="zeml_pol" checked>Земляничные поляны<br>-->
+<!--							<input type="checkbox" name="village" value="ros_slob">Рощинская слобода<br>-->
+<!--							<input type="checkbox" name="village" value="medovoe">Медовое<br>-->
+						</div>
 					</div>
-				</div>
 
-				<div class="filter_elements price_range">Цена, тыс.руб.
-					<input type="text" id="range" value="" name="range">
+					<div class="filter_elements price_range">Цена, тыс.руб.
+						<input type="text" id="range" value="" name="price">
 
-					<div class="count_range_box">
-						<input type="number" class="size-from count_range" value="100">-
-						<input type="number" class="size-to count_range" value="5000">
+						<div class="count_range_box">
+							<input type="number" class="size-from count_range" value="100">-
+							<input type="number" class="size-to count_range" value="5000">
+						</div>
 					</div>
-				</div>
 
-				<div class="filter_elements">Статус
-					<div class="filter_village">
-						<input type="checkbox" name="status" value="not_for_sale" checked>Продан<br>
-						<input type="checkbox" name="status" value="sale">В продаже<br>
+					<div class="filter_elements">Статус
+						<div class="filter_village">
+							<input type="checkbox" name="status" value="not_for_sale" checked>Продан<br>
+							<input type="checkbox" name="status" value="sale">В продаже<br>
+						</div>
 					</div>
-				</div>
 
-				<div class="filter_elements">Наличие дома
-					<div class="filter_village">
-						<input type="checkbox" name="availability_home" value="yes" checked>Участок с домом<br>
-						<input type="checkbox" name="availability_home" value="no">Участок без дома<br>
+					<div class="filter_elements">Наличие дома
+						<div class="filter_village">
+							<input type="checkbox" name="availability_home" value="yes" checked>Участок с домом<br>
+							<input type="checkbox" name="availability_home" value="no">Участок без дома<br>
+						</div>
 					</div>
-				</div>
 
-				<div class="filter_elements price_range">Размер участка, соток
-					<input type="text" id="range2" value="" name="range2">
+					<div class="filter_elements price_range">Размер участка, соток
+						<input type="text" id="range2" value="" name="size">
 
-					<div class="count_range_box">
-						<input type="number" class="size-from2 count_range" value="4">-
-						<input type="number" class="size-to2 count_range" value="26">
+						<div class="count_range_box">
+							<input type="number" class="size-from2 count_range" value="4">-
+							<input type="number" class="size-to2 count_range" value="26">
+						</div>
 					</div>
-				</div>
 
-				<div class="filter_elements">Дата сдачи
-					<div class="filter_village">
-						<input type="checkbox" name="date_delivery" value="2014" checked>до 2014 (уже сдан)<br>
-						<input type="checkbox" name="date_delivery" value="2015">до осени 2015<br>
-						<input type="checkbox" name="date_delivery" value="2016">до осени 2016<br>
+					<div class="filter_elements">Дата сдачи
+						<div class="filter_village">
+							<input type="checkbox" name="date_delivery" value="2014" checked>до 2014 (уже сдан)<br>
+							<input type="checkbox" name="date_delivery" value="2015">до осени 2015<br>
+							<input type="checkbox" name="date_delivery" value="2016">до осени 2016<br>
+						</div>
 					</div>
-				</div>
 
+					<div>
+						<button type="submit">Найти</button>
+					</div>
+
+				</form>
 			</div>
 
 			<div class="result_filter_box">
@@ -170,7 +172,6 @@ RangeAsset::register($this);
 					</div>
 				</div>
 
-				<?php ActiveForm::end(); ?>
 
 				<div class="result">
 					<?php foreach ($districts as $district): ?>
@@ -180,8 +181,33 @@ RangeAsset::register($this);
 
 							</div>
 							<div class="discrict_description">
-								<?= $district->id ?>
-								<?= $district->village_id ?>
+								<p>Посёлок: <?= $district->village->name ?></p>
+
+								<p>Номер участка: <?= $district->number ?></p>
+
+								<p>Количество соток: <?= $district->size ?></p>
+
+								<p>Цена: <?= $district->price ?> тыс.руб.</p>
+
+								<p>Наличие дома: <?php
+									if ($district->is_house) {
+										echo "есть";
+									} else {
+										echo "нет";
+									}
+									?> </p>
+
+								<p>Дата сдачи: <?= $district->date_ready ?></p>
+
+								<p>Статус: <?php
+									if ($district->is_house) {
+										echo "продан";
+									} else {
+										echo "в продаже";
+									}
+									?> </p>
+
+
 							</div>
 						</div>
 					<?php endforeach; ?>
@@ -192,3 +218,4 @@ RangeAsset::register($this);
 		</div>
 	</div>
 </div>
+

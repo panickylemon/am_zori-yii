@@ -37,7 +37,7 @@ AppAsset::register($this);
                     <li>
                         <div><?= Html::a('Посёлки', ['page/village']) ?></div>
                     <li>
-                        <div><a href="selection.html">Подбор участка</a></div>
+                        <div><?= Html::a('Подбор участка', ['selection/selection']) ?></div>
                     <li>
                         <div><?= Html::a('Как купить', ['page/how_buy']) ?></div>
                     <li>

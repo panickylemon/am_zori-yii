@@ -25,8 +25,13 @@ class SelectionController extends Controller
 
 		$districts = $query->all();
 
+		$request = Yii::$app->request;
+
+		$get = $request->get();
+
 		return $this->render('selection', [
 			'districts' => $districts,
+			'get' => $get,
 		]);
 
 

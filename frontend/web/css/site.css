@@ -673,6 +673,11 @@ textarea {
     padding-bottom: 10px;
 }
 
+
+.filter_village label{
+    display: block;
+}
+
 .selection_layout:after {
     content: '';
     clear: both;
@@ -1071,4 +1076,18 @@ textarea {
 .district_result {
     border: 1px solid red;
     margin: 1px;
+    padding-bottom: 5px;
+}
+
+.district_result:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.district_photo{float: left;}
+
+.discrict_description{
+    padding-top: 7px;
+    font-size: 17px;
 }
