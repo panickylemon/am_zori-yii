@@ -27,7 +27,8 @@ class SelectionController extends Controller
 
 		$status = $request->get('is_sold', array());
 		$house = $request->get('is_house', array());
-		$village = $request->get('village_id', array());
+		$village = $request->get('village_id');
+		$ready = $request->get('date_ready');
 
 		if ($status == array('0') || $status == array('1')) {
 			$query->where(['is_sold' => $status]);
@@ -37,8 +38,12 @@ class SelectionController extends Controller
 			$query->andWhere(['is_house' => $house]);
 		}
 
-		if ($village == array('1') || $village == array('2') || $village == array('3')) {
+		if (isset($village)) {
 			$query->andWhere(['village_id' => $village]);
+		}
+
+		if (isset($ready)) {
+			$query->andWhere(['date_ready' => $ready]);
 		}
 
 		$districts = $query->all();
@@ -48,6 +53,7 @@ class SelectionController extends Controller
 			'status'=>$status,
 			'house'=>$house,
 			'village'=>$village,
+			'ready'=>$ready,
 		]);
 
 	}

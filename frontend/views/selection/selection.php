@@ -87,10 +87,8 @@ RangeAsset::register($this);
 
 							<?php $villages = ArrayHelper::map(Village::find()->all(), 'id',
 								'name') ?>
-							<?= Html::checkboxList('village_id', null, $villages,['itemOptions'=>['class' =>
+							<?= Html::checkboxList('village_id', $village, $villages,['itemOptions'=>['class' =>
 								'selection_checkbox']]) ?>
-
-<!--							--><?php //if ($villages != null){ echo "checked"; } ?>
 
 						</div>
 					</div>
@@ -140,9 +138,14 @@ RangeAsset::register($this);
 					<div class="filter_elements">Дата сдачи
 						<div class="filter_village">
 
-							<input type="checkbox" name="date_delivery" value="2014" checked>до 2014 (уже сдан)<br>
-							<input type="checkbox" name="date_delivery" value="2015">до осени 2015<br>
-							<input type="checkbox" name="date_delivery" value="2016">до осени 2016<br>
+							<?php $readys = ArrayHelper::map(DateReadyDistrict::find()->all(), 'id',
+								'date') ?>
+							<?= Html::checkboxList('date_ready', $ready, $readys,['itemOptions'=>['class' =>
+								'selection_checkbox']]) ?>
+
+<!--							<input type="checkbox" name="date_delivery" value="2014" checked>до 2014 (уже сдан)<br>-->
+<!--							<input type="checkbox" name="date_delivery" value="2015">до осени 2015<br>-->
+<!--							<input type="checkbox" name="date_delivery" value="2016">до осени 2016<br>-->
 						</div>
 					</div>
 
