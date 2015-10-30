@@ -4,6 +4,7 @@ $this->title = 'Подбор участка';
 use yii\helpers\Html;
 use frontend\assets\RangeAsset;
 use common\models\Village;
+use common\models\DateReadyDistrict;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 
@@ -84,15 +85,13 @@ RangeAsset::register($this);
 					<div class="filter_elements">Посёлки
 						<div class="filter_village">
 
-							<?php $villages = ArrayHelper::map(Village::find()->orderBy('name')->all(), 'id',
+							<?php $villages = ArrayHelper::map(Village::find()->all(), 'id',
 								'name') ?>
 							<?= Html::checkboxList('village_id', null, $villages,['itemOptions'=>['class' =>
 								'selection_checkbox']]) ?>
 
+<!--							--><?php //if ($villages != null){ echo "checked"; } ?>
 
-<!--							<input type="checkbox" name="village" value="zeml_pol" checked>Земляничные поляны<br>-->
-<!--							<input type="checkbox" name="village" value="ros_slob">Рощинская слобода<br>-->
-<!--							<input type="checkbox" name="village" value="medovoe">Медовое<br>-->
 						</div>
 					</div>
 
@@ -107,20 +106,25 @@ RangeAsset::register($this);
 
 					<div class="filter_elements">Статус
 						<div class="filter_village">
-							<input type="checkbox" name="is_sold[]" value="1" <?php if (in_array('1', $status)){ echo
-								"checked"; }
-							?>>Продан<br>
+							<input type="checkbox" name="is_sold[]" value="1"
+								<?php if (in_array('1', $status)){ echo "checked"; } ?>
+								>Продан<br>
 
-							<input type="checkbox" name="is_sold[]" value="0" <?php if (in_array('0', $status)){ echo
-							"checked"; }
-							?>>В продаже<br>
+							<input type="checkbox" name="is_sold[]" value="0"
+								<?php if (in_array('0', $status)){ echo "checked"; } ?>
+								>В продаже<br>
 						</div>
 					</div>
 
 					<div class="filter_elements">Наличие дома
 						<div class="filter_village">
-							<input type="checkbox" name="availability_home" value="yes" checked>Участок с домом<br>
-							<input type="checkbox" name="availability_home" value="no">Участок без дома<br>
+							<input type="checkbox" name="is_house[]" value="1"
+								<?php if (in_array('1', $house)){echo "checked"; } ?>
+								>Участок с домом<br>
+
+							<input type="checkbox" name="is_house[]" value="0"
+								<?php if (in_array('0', $house)){echo "checked"; } ?>
+								>Участок без дома<br>
 						</div>
 					</div>
 
@@ -135,6 +139,7 @@ RangeAsset::register($this);
 
 					<div class="filter_elements">Дата сдачи
 						<div class="filter_village">
+
 							<input type="checkbox" name="date_delivery" value="2014" checked>до 2014 (уже сдан)<br>
 							<input type="checkbox" name="date_delivery" value="2015">до осени 2015<br>
 							<input type="checkbox" name="date_delivery" value="2016">до осени 2016<br>
@@ -202,10 +207,10 @@ RangeAsset::register($this);
 									}
 									?> </p>
 
-								<p>Дата сдачи: <?= $district->date_ready ?></p>
+								<p>Дата сдачи: <?= $district->dateReadyDistrict->date ?></p>
 
 								<p>Статус: <?php
-									if ($district->is_house) {
+									if ($district->is_sold) {
 										echo "продан";
 									} else {
 										echo "в продаже";

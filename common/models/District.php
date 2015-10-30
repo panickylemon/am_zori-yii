@@ -78,4 +78,8 @@ class District extends \yii\db\ActiveRecord
         return $this->hasOne(Village::className(), ["id" => "village_id"]);
     }
 
+    public function getDateReadyDistrict()
+    {
+        return $this->hasOne(DateReadyDistrict::className(), ["id" => "date_ready"]);
+    }
 }

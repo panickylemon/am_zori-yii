@@ -25,12 +25,20 @@ class SelectionController extends Controller
 		$query = District::find();
 
 
-
 		$status = $request->get('is_sold', array());
+		$house = $request->get('is_house', array());
+		$village = $request->get('village_id', array());
 
 		if ($status == array('0') || $status == array('1')) {
-			$query = $query
-			->where(['is_sold' => $status]);
+			$query->where(['is_sold' => $status]);
+		}
+
+		if ($house == array('0') || $house == array('1')) {
+			$query->andWhere(['is_house' => $house]);
+		}
+
+		if ($village == array('1') || $village == array('2') || $village == array('3')) {
+			$query->andWhere(['village_id' => $village]);
 		}
 
 		$districts = $query->all();
@@ -38,6 +46,8 @@ class SelectionController extends Controller
 		return $this->render('selection', [
 			'districts' => $districts,
 			'status'=>$status,
+			'house'=>$house,
+			'village'=>$village,
 		]);
 
 	}
