@@ -26,7 +26,7 @@ class TabAsset extends AssetBundle
         'gallery/js/jquery.elastislide.js',
         'gallery/js/gallery.js',
         'js/jquery.corner.js',
-        'js/review_form.js',
+        //'js/review_form.js',
         'js/IEfix.js',
     ];
 

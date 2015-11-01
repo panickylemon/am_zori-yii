@@ -15,7 +15,7 @@ use Yii;
  * @property integer $is_sold
  * @property integer $is_house
  * @property string $date_ready
- * @property string $photo
+ * @property string $image
  */
 class District extends \yii\db\ActiveRecord
 {

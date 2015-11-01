@@ -34,17 +34,29 @@ class ReviewController extends Controller
 //    }
 
 
-//    public function actionReview()
-//    {
-//        $review = new Reviews();
-//
-//        if ($review->load(Yii::$app->request->post()) && $review->save()) {
-//            return $this->redirect(['review/village_1']);
-//        } else {
-//            return $this->render('village_1', [
-//                'review' => $review,
-//            ]);
-//        }
-//    }
+    public function actionAbout()
+    {
+        $review = new Reviews();
+
+        $review->created = date("Y-m-d H:i");
+
+        $query = Reviews::find();
+
+        $reviews = $query->orderBy('id')
+            ->all() ;
+
+        if ($review->load(Yii::$app->request->post()) && $review->save()) {
+            return $this->redirect(['review/about']);
+        } else {
+            return $this->render('about', [
+                'reviews' => $reviews,
+                'review' => $review
+            ]);
+        }
+
+
+    }
+
+
 
 }

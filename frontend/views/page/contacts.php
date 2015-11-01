@@ -3,7 +3,7 @@ $this->title = 'Контакты';
 
 use yii\helpers\Html;
 
-$this->registerJsFile('js/request_call_form.js');
+$this->registerJsFile('../js/request_call_form.js');
 ?>
 
 	<script type="text/javascript"

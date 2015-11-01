@@ -33,7 +33,7 @@ AppAsset::register($this);
             <div class="menu_block">
                 <ul id="navbar">
                     <li>
-                        <div><?= Html::a('О компании', ['page/about']) ?></div>
+                        <div><?= Html::a('О компании', ['review/about']) ?></div>
                     <li>
                         <div><?= Html::a('Посёлки', ['page/village']) ?></div>
                     <li>

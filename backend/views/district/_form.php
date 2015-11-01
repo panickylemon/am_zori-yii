@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use common\models\Village;
+use common\models\DateReadyDistrict;
+use kartik\file\FileInput;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\District */
@@ -29,9 +31,21 @@ use common\models\Village;
 
     <?= $form->field($model, 'is_house')->checkbox() ?>
 
-    <?= $form->field($model, 'date_ready')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'date_ready')->dropDownList(ArrayHelper::map(DateReadyDistrict::find()->all(), 'id',
+        'date'),
+        ['prompt='>'- Choose Your Permissions -']) ?>
 
-    <?= $form->field($model, 'image')->fileInput() ?>
+    <?= FileInput::widget([
+        'options'=>['accept'=>'image/*'],
+        'model' => $model,
+        'attribute' => 'image',
+        'pluginOptions' => [
+            'initialPreview'=>$model->image ? [
+                 Html::img($model->thumburl),
+            ] : false,
+            'overwriteInitial'=>true
+        ]
+    ]);?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

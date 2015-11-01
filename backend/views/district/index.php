@@ -11,7 +11,7 @@ $this->title = 'Districts';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="district-index">
-
+    <div><?= Html::a('Главная', ['main/index']) ?></div>
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 

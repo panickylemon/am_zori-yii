@@ -12,7 +12,6 @@ use Yii;
  * @property string $firstname
  * @property string $middlename
  * @property string $lastname
- * @property integer $number_sector
  * @property string $review
  * @property string $date
  */
@@ -32,10 +31,8 @@ class Reviews extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['firstname', 'middlename', 'lastname', 'number_sector', 'review', 'date'], 'required'],
-            [['number_sector'], 'integer'],
+            [['firstname', 'review'], 'required'],
             [['review'], 'string'],
-            [['date'], 'safe'],
             [['firstname', 'middlename', 'lastname'], 'string', 'max' => 50]
         ];
     }
@@ -47,12 +44,11 @@ class Reviews extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'firstname' => 'Firstname',
-            'middlename' => 'Middlename',
-            'lastname' => 'Lastname',
-            'number_sector' => 'Number Sector',
-            'review' => 'Review',
-            'date' => 'Date',
+            'firstname' => 'Имя',
+            'middlename' => 'Отчество',
+            'lastname' => 'Фамилия',
+            'review' => 'Отзыв',
+            //'date' => 'Дата отзыва',
         ];
     }
 }
