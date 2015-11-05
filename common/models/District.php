@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "district".
@@ -57,6 +58,40 @@ class District extends \yii\db\ActiveRecord
             'date_ready' => 'Date Ready',
             'image' => 'Photo',
         ];
+    }
+
+    public function getImageFile()
+    {
+        return isset($this->image) ? Yii::getAlias('@frontend/web/uploads/' . $this->image) : null;
+    }
+
+    public function uploadImage() {
+        $image = UploadedFile::getInstance($this, 'image');
+
+        if (empty($image)) {
+            return false;
+        }
+        $random_string = Yii::$app->security->generateRandomString();
+
+        $this->image = $random_string.".{$image->extension}";
+
+        return $image;
+    }
+
+    public function deleteImage() {
+        $file = $this->getImageFile();
+
+        if (empty($file) || !file_exists($file)) {
+            return false;
+        }
+
+        if (!unlink($file)) {
+            return false;
+        }
+
+        $this->image = null;
+
+        return true;
     }
 
     public function getImageurl()

@@ -1,9 +1,9 @@
 
 
 var name_regexp = /^[a-zA-ZА-Яа-яёЁ-]{2,32}$/i;
-var lastname_regexp = /^[a-zA-ZА-Яа-яёЁ-]*$/i;
-var middlename_regexp = /^[a-zA-ZА-Яа-яёЁ-]{2,32}$/i;
-var locality_regexp = /^[0-9]{1,5}$/i;
+//var lastname_regexp = /^[a-zA-ZА-Яа-яёЁ-]*$/i;
+//var middlename_regexp = /^[a-zA-ZА-Яа-яёЁ-]{2,32}$/i;
+//var locality_regexp = /^[0-9]{1,5}$/i;
 var my_review_regexp = /^[А-Яа-яёЁ-]{10,1500}$/i;
 
 
@@ -52,71 +52,71 @@ $(document).ready(function(){
     };
 
 
-    var validate_middlename = function () {
-        var elem = $(".middlename");
-        var value = $(".middlename").val();
-        $(".middlename").val(value.trim());
-        var string_length = value.trim().length;
-        var elem_result = $(".middlename").parent().parent().next();
-        if(string_length != 0) {
-                if (value.trim().match(name_regexp) == null) {
-                    var error_text = $(".middlename_error_text").text();
-                    elem_result.html(error_text);
-                    elem.addClass("field_incorrect");
-                } else {
-                    elem_result.html(checker);
-                    elem.removeClass("field_incorrect");
-                }
-        } else {
-            elem_result.html("");
-            elem.removeClass("field_incorrect");
-        }
-    };
-
-
-    var validate_lastname = function () {
-        var elem = $(".lastname");
-        var value = $(".lastname").val();
-        $(".lastname").val(value.trim());
-        var string_length = value.trim().length;
-        var elem_result = $(".lastname").parent().parent().next();
-        if(string_length != 0) {
-                if (value.trim().match(lastname_regexp) == null) {
-                    var error_text = $(".lastname_error_text").text();
-                    elem_result.html(error_text);
-                    elem.addClass("field_incorrect");
-                } else {
-                    elem_result.html(checker);
-                    elem.removeClass("field_incorrect");
-                }
-            } else {
-                elem_result.html("");
-                elem.removeClass("field_incorrect");
-        }
-    };
-
-
-
-    var validate_locality = function () {
-        var elem = $(".locality");
-        var value = $(".locality").val();
-        $(".locality").val(value.trim());
-        var string_length = value.trim().length;
-        var elem_result = $(".locality").parent().parent().next();
-        if(string_length != 0) {
-                if (value.trim().match(locality_regexp) == null) {
-                    var error_text = $(".locality_error_text").text();
-                    elem_result.html(error_text);
-                    elem.addClass("field_incorrect");
-                } else {
-                    elem_result.html(checker);
-                    elem.removeClass("field_incorrect");
-                }
-        } else {
-            elem_result.html("");
-            elem.removeClass("field_incorrect");
-        }
-    };
+    //var validate_middlename = function () {
+    //    var elem = $(".middlename");
+    //    var value = $(".middlename").val();
+    //    $(".middlename").val(value.trim());
+    //    var string_length = value.trim().length;
+    //    var elem_result = $(".middlename").parent().parent().next();
+    //    if(string_length != 0) {
+    //            if (value.trim().match(name_regexp) == null) {
+    //                var error_text = $(".middlename_error_text").text();
+    //                elem_result.html(error_text);
+    //                elem.addClass("field_incorrect");
+    //            } else {
+    //                elem_result.html(checker);
+    //                elem.removeClass("field_incorrect");
+    //            }
+    //    } else {
+    //        elem_result.html("");
+    //        elem.removeClass("field_incorrect");
+    //    }
+    //};
+    //
+    //
+    //var validate_lastname = function () {
+    //    var elem = $(".lastname");
+    //    var value = $(".lastname").val();
+    //    $(".lastname").val(value.trim());
+    //    var string_length = value.trim().length;
+    //    var elem_result = $(".lastname").parent().parent().next();
+    //    if(string_length != 0) {
+    //            if (value.trim().match(lastname_regexp) == null) {
+    //                var error_text = $(".lastname_error_text").text();
+    //                elem_result.html(error_text);
+    //                elem.addClass("field_incorrect");
+    //            } else {
+    //                elem_result.html(checker);
+    //                elem.removeClass("field_incorrect");
+    //            }
+    //        } else {
+    //            elem_result.html("");
+    //            elem.removeClass("field_incorrect");
+    //    }
+    //};
+    //
+    //
+    //
+    //var validate_locality = function () {
+    //    var elem = $(".locality");
+    //    var value = $(".locality").val();
+    //    $(".locality").val(value.trim());
+    //    var string_length = value.trim().length;
+    //    var elem_result = $(".locality").parent().parent().next();
+    //    if(string_length != 0) {
+    //            if (value.trim().match(locality_regexp) == null) {
+    //                var error_text = $(".locality_error_text").text();
+    //                elem_result.html(error_text);
+    //                elem.addClass("field_incorrect");
+    //            } else {
+    //                elem_result.html(checker);
+    //                elem.removeClass("field_incorrect");
+    //            }
+    //    } else {
+    //        elem_result.html("");
+    //        elem.removeClass("field_incorrect");
+    //    }
+    //};
 
 
 
@@ -154,23 +154,23 @@ $(document).ready(function(){
     $(".firstname").on("keyup change", function () {
         validate_firstname(true);
     });
-    $(".middlename").on("keyup change", function () {
-        validate_middlename();
-    });
-    $(".lastname").on("keyup change", function () {
-        validate_lastname();
-    });
-    $(".locality").on("keyup change", function () {
-        validate_locality();
-    });
+    //$(".middlename").on("keyup change", function () {
+    //    validate_middlename();
+    //});
+    //$(".lastname").on("keyup change", function () {
+    //    validate_lastname();
+    //});
+    //$(".locality").on("keyup change", function () {
+    //    validate_locality();
+    //});
     $(".my_review").on("keyup change", function () {
         validate_my_review(true);
     });
 
     validate_firstname(false);
-    validate_middlename();
-    validate_lastname();
-    validate_locality();
+    //validate_middlename();
+    //validate_lastname();
+    //validate_locality();
     validate_my_review(false);
 
     $("[name=review_form]").submit(function () {

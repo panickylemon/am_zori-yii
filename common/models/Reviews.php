@@ -10,8 +10,6 @@ use Yii;
  *
  * @property integer $id
  * @property string $firstname
- * @property string $middlename
- * @property string $lastname
  * @property string $review
  * @property string $date
  */
@@ -33,7 +31,7 @@ class Reviews extends \yii\db\ActiveRecord
         return [
             [['firstname', 'review'], 'required'],
             [['review'], 'string'],
-            [['firstname', 'middlename', 'lastname'], 'string', 'max' => 50]
+            [['firstname'], 'string', 'max' => 50]
         ];
     }
 
@@ -45,8 +43,6 @@ class Reviews extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'firstname' => 'Имя',
-            'middlename' => 'Отчество',
-            'lastname' => 'Фамилия',
             'review' => 'Отзыв',
             //'date' => 'Дата отзыва',
         ];

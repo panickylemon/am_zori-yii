@@ -48,19 +48,19 @@ class DistrictController extends Controller
 	}
 
 
-	function saveImage($model) {
+	function saveThumb($model) {
 		if ($model->image) {
-			$full = Yii::getAlias('@frontend/web/uploads/' . $model->image->baseName . '.' . $model->image->extension);
-			$thumb = Yii::getAlias('@frontend/web/uploads/' . $model->image->baseName . '_thumb.' . $model->image->extension);
-			$thumb2 = Yii::getAlias('@frontend/web/uploads/' . $model->image->baseName . '_thumb2.' .
-				$model->image->extension);
-
-			$model->image->saveAs($full);
+			$full = Yii::getAlias('@frontend/web/uploads/' . $model->image);
+			$thumb = Yii::getAlias('@frontend/web/uploads/' . pathinfo($model->image, PATHINFO_FILENAME) . '_thumb.' . pathinfo
+				($model->image, PATHINFO_EXTENSION));
+			$thumb2 = Yii::getAlias('@frontend/web/uploads/' . pathinfo($model->image, PATHINFO_FILENAME) . '_thumb2.' .
+				pathinfo($model->image, PATHINFO_EXTENSION));
 
 			$size = new \Imagine\Image\Box(150, 150);
-			$size2 = new \Imagine\Image\Box(250, 250);
+			$size2 = new \Imagine\Image\Box(200, 200);
 			$mode = \Imagine\Image\ImageInterface::THUMBNAIL_INSET;
 
+			//$model->image->saveAs($full);
 
 			Image::frame($full)
 				->thumbnail($size2, $mode)
@@ -69,8 +69,6 @@ class DistrictController extends Controller
 			Image::frame($full)
 				->thumbnail($size, $mode)
 				->save($thumb);
-
-
 		}
 	}
 
@@ -78,53 +76,62 @@ class DistrictController extends Controller
 	public function actionCreate()
 	{
 		$model = new District();
-		$model->load(Yii::$app->request->post());
-		$model->image = UploadedFile::getInstance($model, 'image');
-		if ($model->save()) {
-			$this->saveImage($model);
-			//print_r(UploadedFile::getInstance($model, 'image'));
-			return $this->redirect(['view', 'id' => $model->id]);
-		} else {
-			return $this->render('create', [
-				'model' => $model,
-			]);
+
+		if ($model->load(Yii::$app->request->post())) {
+			$image = $model->uploadImage();
+
+			if ($model->save()) {
+				if ($image !== false) {
+					$path = $model->getImageFile();
+					$image->saveAs($path);
+					$this->saveThumb($model);
+				}
+				return $this->redirect(['view', 'id'=>$model->id]);
+			}
 		}
+		return $this->render('create', [
+			'model'=>$model,
+		]);
 	}
 
 
 	public function actionUpdate($id)
 	{
 		$model = $this->findModel($id);
-		$oldFile = Yii::getAlias('@frontend/web/uploads/' . $model->image);
-		$oldFileName = $model->image;
+		$oldFile = $model->getImageFile();
+		$oldImage = $model->image;
 
 		if ($model->load(Yii::$app->request->post())) {
-			$image = UploadedFile::getInstance($model, 'image');
+			$image = $model->uploadImage();
 
-			if (empty($image)) {
-				$image = false;
-				$model->image = $oldFileName;
-			} else {
-				$model->image = $image;
+			if ($image === false) {
+				$model->image = $oldImage;
 			}
 
 			if ($model->save()) {
 				if ($image !== false && unlink($oldFile)) {
-					$this->saveImage($model);
+					$path = $model->getImageFile();
+					$image->saveAs($path);
+					$this->saveThumb($model);
 				}
-				return $this->redirect(['view', 'id' => $model->id]);
+				return $this->redirect(['view', 'id'=>$model->id]);
 			}
 		}
 		return $this->render('update', [
-			'model' => $model,
+			'model'=>$model,
 		]);
 	}
 
 
 	public function actionDelete($id)
 	{
-		$this->findModel($id)->delete();
+		$model = $this->findModel($id);
 
+		if ($model->delete()) {
+			if (!$model->deleteImage()) {
+				Yii::$app->session->setFlash('error', 'Error deleting image');
+			}
+		}
 		return $this->redirect(['index']);
 	}
 

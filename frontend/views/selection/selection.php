@@ -149,8 +149,8 @@ RangeAsset::register($this);
 						</div>
 					</div>
 
-					<div>
-						<button type="submit">Найти</button>
+					<div class="submit_selection">
+						<button class="submit_request_call" type="submit">Найти</button>
 					</div>
 
 				</form>
@@ -159,14 +159,14 @@ RangeAsset::register($this);
 			<div class="result_filter_box">
 
 				<div class="sorting_box">
-					<div class="sorting sort_group">Сортировать:<br>
+					<div class="sorting sort_group">Сортировать
 						<select name="">
 							<option value="up">По возрастанию цен</option>
 							<option value="down">По убыванию цен</option>
 						</select>
 					</div>
 
-					<div class="grouping sort_group">Группировать:<br>
+					<div class="grouping sort_group">Группировать
 						<select name="">
 							<option value="size">По размеру участка</option>
 							<option value="date">По дате сдачи</option>
@@ -175,14 +175,14 @@ RangeAsset::register($this);
 						</select>
 					</div>
 
-					<div class="view sort_group">Вид:<br>
-						<select name="">
-							<option value="list">Список</option>
-							<option value="short">Кратко</option>
-							<option value="detail">Подробно</option>
-						</select>
-
-					</div>
+<!--					<div class="view sort_group">Вид:<br>-->
+<!--						<select name="">-->
+<!--							<option value="list">Список</option>-->
+<!--							<option value="short">Кратко</option>-->
+<!--							<option value="detail">Подробно</option>-->
+<!--						</select>-->
+<!---->
+<!--					</div>-->
 				</div>
 
 
@@ -191,36 +191,54 @@ RangeAsset::register($this);
 						<div class="district_result">
 							<div class="district_photo">
 								<img src="<?= $district->getThumburl2() ?>">
-
 							</div>
-							<div class="discrict_description">
-								<p>Посёлок: <?= $district->village->name ?></p>
 
-								<p>Номер участка: <?= $district->number ?></p>
+							<div class="discrict_description">
+
+								<p><b>Участок № <?= $district->number ?></b> в посёлке <b><?=
+										$district->village->name ?></b>
+
+								 <?php
+									if ($district->is_house) {
+										echo Html::img('../pictures/home78.png', ['alt' => 'home']);
+									} else {
+										echo " ";
+									}
+									?>
+
+								<?php
+									if ($district->is_sold) {
+										echo Html::img('../pictures/delete74.png', ['alt' => 'home']);
+									} else {
+										echo Html::img('../pictures/shopping211.png', ['alt' => 'home']);
+									}
+									?></p>
 
 								<p>Количество соток: <?= $district->size ?></p>
 
-								<p>Цена: <?= $district->price ?> тыс.руб.</p>
-
-								<p>Наличие дома: <?php
-									if ($district->is_house) {
-										echo "есть";
-									} else {
-										echo "нет";
-									}
-									?> </p>
-
 								<p>Дата сдачи: <?= $district->dateReadyDistrict->date ?></p>
 
-								<p>Статус: <?php
-									if ($district->is_sold) {
-										echo "продан";
+								<p>Статус:<?php
+								if ($district->is_sold) {
+									echo " продан";
+								} else {
+									echo " в продаже";;
+								}
+								?></p>
+
+								<p>Наличие дома:<?php
+									if ($district->is_house) {
+										echo " с домом";
 									} else {
-										echo "в продаже";
+										echo " без дома";;
 									}
-									?> </p>
+									?></p>
 
+								<p class="price_hidden"><?= $district->price ?> тыс.руб.</p>
+							</div>
 
+							<div class="district_price">
+								<p><?= $district->price ?> тыс.руб.</p>
 							</div>
 						</div>
 					<?php endforeach; ?>
