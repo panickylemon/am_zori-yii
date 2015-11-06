@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$this->registerJsFile('../js/review_form.js');
+// $this->registerJsFile('../js/review_form.js');
 ?>
 
 <div class="content_village">
@@ -146,11 +146,11 @@ $this->registerJsFile('../js/review_form.js');
 				<div class="reviews">
 
 					<div>
-						<?php foreach ($reviews as $review): ?>
+						<?php foreach ($reviews as $review_entity): ?>
 							<div class="review corner_ie8">
-								<div class="date_review"><?= $review->created ?></div>
-								<div class="signature_review"><?= $review->firstname ?></div>
-								<div><?= $review->review ?></div>
+								<div class="date_review"><?= $review_entity->created ?></div>
+								<div class="signature_review"><?= $review_entity->firstname ?></div>
+								<div><?= $review_entity->review ?></div>
 							</div>
 						<?php endforeach; ?>
 					</div>

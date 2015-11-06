@@ -5,7 +5,6 @@ use yii\helpers\Html;
 use frontend\assets\RangeAsset;
 use common\models\Village;
 use common\models\DateReadyDistrict;
-use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 
 
@@ -20,9 +19,9 @@ RangeAsset::register($this);
 			hide_min_max: true,
 			keyboard: true,
 			min: 100,
-			max: 5000,
-			from: 100,
-			to: 5000,
+			max: 7000,
+			from: <?= $prices[0] ?>,
+			to: <?= $prices[1] ?>,
 			type: 'double',
 			step: 50,
 			grid: true
@@ -45,8 +44,8 @@ RangeAsset::register($this);
 			keyboard: true,
 			min: 4,
 			max: 26,
-			from: 1,
-			to: 30,
+			from: <?= $sizes[0] ?>,
+			to: <?= $sizes[1] ?>,
 			type: 'double',
 			step: 1,
 			grid: true
@@ -97,8 +96,8 @@ RangeAsset::register($this);
 						<input type="text" id="range" value="" name="price">
 
 						<div class="count_range_box">
-							<input type="number" class="size-from count_range" value="100">-
-							<input type="number" class="size-to count_range" value="5000">
+							<input type="text" class="size-from count_range" value="<?= $prices[0] ?>">-
+							<input type="text" class="size-to count_range" value="<?= $prices[1] ?>">
 						</div>
 					</div>
 
@@ -106,11 +105,11 @@ RangeAsset::register($this);
 						<div class="filter_village">
 							<input type="checkbox" name="is_sold[]" value="1"
 								<?php if (in_array('1', $status)){ echo "checked"; } ?>
-								>Продан<br>
+								> Продан<br>
 
 							<input type="checkbox" name="is_sold[]" value="0"
 								<?php if (in_array('0', $status)){ echo "checked"; } ?>
-								>В продаже<br>
+								> В продаже<br>
 						</div>
 					</div>
 
@@ -118,11 +117,11 @@ RangeAsset::register($this);
 						<div class="filter_village">
 							<input type="checkbox" name="is_house[]" value="1"
 								<?php if (in_array('1', $house)){echo "checked"; } ?>
-								>Участок с домом<br>
+								> Участок с домом<br>
 
 							<input type="checkbox" name="is_house[]" value="0"
 								<?php if (in_array('0', $house)){echo "checked"; } ?>
-								>Участок без дома<br>
+								> Участок без дома<br>
 						</div>
 					</div>
 
@@ -130,8 +129,8 @@ RangeAsset::register($this);
 						<input type="text" id="range2" value="" name="size">
 
 						<div class="count_range_box">
-							<input type="number" class="size-from2 count_range" value="4">-
-							<input type="number" class="size-to2 count_range" value="26">
+							<input type="text" class="size-from2 count_range" value="<?= $sizes[0] ?>">-
+							<input type="text" class="size-to2 count_range" value="<?= $sizes[1] ?>">
 						</div>
 					</div>
 
@@ -158,23 +157,23 @@ RangeAsset::register($this);
 
 			<div class="result_filter_box">
 
-				<div class="sorting_box">
-					<div class="sorting sort_group">Сортировать
-						<select name="">
-							<option value="up">По возрастанию цен</option>
-							<option value="down">По убыванию цен</option>
-						</select>
-					</div>
-
-					<div class="grouping sort_group">Группировать
-						<select name="">
-							<option value="size">По размеру участка</option>
-							<option value="date">По дате сдачи</option>
-							<option value="village">По посёлкам</option>
-							<option value="status">По статусу (продан/не продан)</option>
-						</select>
-					</div>
-
+<!--				<div class="sorting_box">-->
+<!--					<div class="sorting sort_group">Сортировать-->
+<!--						<select name="">-->
+<!--							<option value="up">По возрастанию цен</option>-->
+<!--							<option value="down">По убыванию цен</option>-->
+<!--						</select>-->
+<!--					</div>-->
+<!---->
+<!--					<div class="grouping sort_group">Группировать-->
+<!--						<select name="">-->
+<!--							<option value="size">По размеру участка</option>-->
+<!--							<option value="date">По дате сдачи</option>-->
+<!--							<option value="village">По посёлкам</option>-->
+<!--							<option value="status">По статусу (продан/не продан)</option>-->
+<!--						</select>-->
+<!--					</div>-->
+<!---->
 <!--					<div class="view sort_group">Вид:<br>-->
 <!--						<select name="">-->
 <!--							<option value="list">Список</option>-->
@@ -183,7 +182,7 @@ RangeAsset::register($this);
 <!--						</select>-->
 <!---->
 <!--					</div>-->
-				</div>
+<!--				</div>-->
 
 
 				<div class="result">
@@ -200,7 +199,8 @@ RangeAsset::register($this);
 
 								 <?php
 									if ($district->is_house) {
-										echo Html::img('../pictures/home78.png', ['alt' => 'home']);
+										echo Html::img('../pictures/home78.png', ['alt' => 'home','class'
+										=>'icon_result']);
 									} else {
 										echo " ";
 									}
@@ -208,9 +208,11 @@ RangeAsset::register($this);
 
 								<?php
 									if ($district->is_sold) {
-										echo Html::img('../pictures/delete74.png', ['alt' => 'home']);
+										echo Html::img('../pictures/delete74.png', ['alt' => 'home', 'class'
+										=>'icon_result']);
 									} else {
-										echo Html::img('../pictures/shopping211.png', ['alt' => 'home']);
+										echo Html::img('../pictures/shopping211.png', ['alt' => 'home','class'
+										=>'icon_result']);
 									}
 									?></p>
 

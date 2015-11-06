@@ -1,19 +1,11 @@
 <?php
 namespace frontend\controllers;
 
-use common\models\District;
+
 use Yii;
-use common\models\LoginForm;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
-use frontend\models\SignupForm;
-use frontend\models\ContactForm;
-use yii\base\InvalidParamException;
-use yii\web\BadRequestHttpException;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
-use common\models\Reviews;
+use common\models\District;
+
 
 class SelectionController extends Controller
 {
@@ -29,6 +21,8 @@ class SelectionController extends Controller
 		$house = $request->get('is_house', array());
 		$village = $request->get('village_id');
 		$ready = $request->get('date_ready');
+		$price = $request->get('price');
+		$size = $request->get('size');
 
 		if ($status == array('0') || $status == array('1')) {
 			$query->where(['is_sold' => $status]);
@@ -46,7 +40,21 @@ class SelectionController extends Controller
 			$query->andWhere(['date_ready' => $ready]);
 		}
 
-		$districts = $query->all();
+		$prices = Array(100, 7000);
+		if (isset($price) && preg_match("/^\d+;\d+$/", $price)) {
+			$prices = explode(";", $price);
+			$query->andWhere(['>=', 'price', $prices[0]]);
+			$query->andWhere(['<=', 'price', $prices[1]]);
+		}
+
+		$sizes = Array(4, 26);
+		if (isset($size ) && preg_match("/^\d+;\d+$/", $size)) {
+			$sizes = explode(";", $size);
+			$query->andWhere(['>=', 'size', $sizes[0]]);
+			$query->andWhere(['<=', 'size', $sizes[1]]);
+		}
+
+		$districts = $query->orderBy('price')->all();
 
 		return $this->render('selection', [
 			'districts' => $districts,
@@ -54,6 +62,8 @@ class SelectionController extends Controller
 			'house'=>$house,
 			'village'=>$village,
 			'ready'=>$ready,
+			'prices'=>$prices,
+			'sizes'=>$sizes
 		]);
 
 	}

@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Districts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="district-create">
-    <?php echo Html::a('Все отзывы', ['review/index']) ?>
+    <?php echo Html::a('Все участки', ['district/index']) ?>
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [

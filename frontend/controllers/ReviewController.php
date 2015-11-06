@@ -42,13 +42,35 @@ class ReviewController extends Controller
 
         $query = Reviews::find();
 
-        $reviews = $query->orderBy('id')
-            ->all() ;
+        $reviews = $query->orderBy('created DESC')->limit(5)-> all();
 
         if ($review->load(Yii::$app->request->post()) && $review->save()) {
             return $this->redirect(['review/about']);
         } else {
             return $this->render('about', [
+                'reviews' => $reviews,
+                'review' => $review
+            ]);
+        }
+
+
+    }
+
+
+    public function actionReview()
+    {
+        $review = new Reviews();
+
+        $review->created = date("Y-m-d H:i");
+
+        $query = Reviews::find();
+
+        $reviews = $query->orderBy('created DESC')-> all();
+
+        if ($review->load(Yii::$app->request->post()) && $review->save()) {
+            return $this->redirect(['review/review']);
+        } else {
+            return $this->render('review', [
                 'reviews' => $reviews,
                 'review' => $review
             ]);

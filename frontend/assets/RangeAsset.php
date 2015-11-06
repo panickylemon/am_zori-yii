@@ -16,7 +16,8 @@ class RangeAsset extends AssetBundle
     public $css = [
         'range/normalize.css',
         'range/ion.rangeSlider.css',
-        'range/ion.rangeSlider.skinNice.css',
+//        'range/ion.rangeSlider.skinNice.css',
+        'range/ion.rangeSlider.skinModern.css'
     ];
     public $js = [
         'range/ion.rangeSlider.js',
