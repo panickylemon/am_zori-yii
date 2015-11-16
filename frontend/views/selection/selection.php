@@ -149,41 +149,13 @@ RangeAsset::register($this);
 					</div>
 
 					<div class="submit_selection">
-						<button class="submit_request_call" type="submit">Найти</button>
+						<button class="submit_form" type="submit">Найти</button>
 					</div>
 
 				</form>
 			</div>
 
 			<div class="result_filter_box">
-
-<!--				<div class="sorting_box">-->
-<!--					<div class="sorting sort_group">Сортировать-->
-<!--						<select name="">-->
-<!--							<option value="up">По возрастанию цен</option>-->
-<!--							<option value="down">По убыванию цен</option>-->
-<!--						</select>-->
-<!--					</div>-->
-<!---->
-<!--					<div class="grouping sort_group">Группировать-->
-<!--						<select name="">-->
-<!--							<option value="size">По размеру участка</option>-->
-<!--							<option value="date">По дате сдачи</option>-->
-<!--							<option value="village">По посёлкам</option>-->
-<!--							<option value="status">По статусу (продан/не продан)</option>-->
-<!--						</select>-->
-<!--					</div>-->
-<!---->
-<!--					<div class="view sort_group">Вид:<br>-->
-<!--						<select name="">-->
-<!--							<option value="list">Список</option>-->
-<!--							<option value="short">Кратко</option>-->
-<!--							<option value="detail">Подробно</option>-->
-<!--						</select>-->
-<!---->
-<!--					</div>-->
-<!--				</div>-->
-
 
 				<div class="result">
 					<?php foreach ($districts as $district): ?>
@@ -194,8 +166,8 @@ RangeAsset::register($this);
 
 							<div class="discrict_description">
 
-								<p><b>Участок № <?= $district->number ?></b> в посёлке <b><?=
-										$district->village->name ?></b>
+								<p><b class="blue">Участок № <?= $district->number ?></b> в посёлке <?=
+										$district->village->name ?>
 
 								 <?php
 									if ($district->is_house) {
@@ -211,7 +183,7 @@ RangeAsset::register($this);
 										echo Html::img('../pictures/delete74.png', ['alt' => 'home', 'class'
 										=>'icon_result']);
 									} else {
-										echo Html::img('../pictures/shopping211.png', ['alt' => 'home','class'
+										echo Html::img('../pictures/shopping212.png', ['alt' => 'home','class'
 										=>'icon_result']);
 									}
 									?></p>

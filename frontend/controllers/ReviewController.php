@@ -12,7 +12,9 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\data\Pagination;
 use common\models\Reviews;
+
 
 /**
  * Review controller
@@ -65,14 +67,21 @@ class ReviewController extends Controller
 
         $query = Reviews::find();
 
-        $reviews = $query->orderBy('created DESC')-> all();
+        $reviews = $query->orderBy('created DESC');
+
+        $countQuery = clone $reviews;
+        $pages = new Pagination(['defaultPageSize' => 10, 'totalCount' => $countQuery->count()]);
+        $reviews = $query->offset($pages->offset)
+            ->limit($pages->limit)
+            ->all();
 
         if ($review->load(Yii::$app->request->post()) && $review->save()) {
             return $this->redirect(['review/review']);
         } else {
             return $this->render('review', [
                 'reviews' => $reviews,
-                'review' => $review
+                'review' => $review,
+                'pages' => $pages,
             ]);
         }
 

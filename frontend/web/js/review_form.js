@@ -1,15 +1,12 @@
 
 
-var name_regexp = /^[a-zA-ZА-Яа-яёЁ-]{2,32}$/i;
-//var lastname_regexp = /^[a-zA-ZА-Яа-яёЁ-]*$/i;
-//var middlename_regexp = /^[a-zA-ZА-Яа-яёЁ-]{2,32}$/i;
-//var locality_regexp = /^[0-9]{1,5}$/i;
-var my_review_regexp = /^[А-Яа-яёЁ-]{10,1500}$/i;
+var name_regexp = /^[\sА-Яа-яёЁ-]{2,32}$/i;
+var my_review_regexp = /^.{10,2500}$/i;
 
 
-//
+
 //var ids_regexp = /^[\d]{1,99999999}$/;
-//
+
 
 
 var checker = '<span class="checker">&#10004</span>';
@@ -24,10 +21,9 @@ $(document).ready(function(){
 
     var validate_firstname = function (check_zero) {
         var elem = $(".firstname");
-        var value = $(".firstname").val();
-        $(".firstname").val(value.trim());
+        var value = elem.val();
         var string_length = value.trim().length;
-        var elem_result = $(".firstname").parent().parent().next();
+        var elem_result = elem.parent().parent().next();
         if (check_zero) {
             if (value.trim().match(name_regexp) == null) {
                 var error_text = $(".firstname_error_text").text();
@@ -52,81 +48,11 @@ $(document).ready(function(){
     };
 
 
-    //var validate_middlename = function () {
-    //    var elem = $(".middlename");
-    //    var value = $(".middlename").val();
-    //    $(".middlename").val(value.trim());
-    //    var string_length = value.trim().length;
-    //    var elem_result = $(".middlename").parent().parent().next();
-    //    if(string_length != 0) {
-    //            if (value.trim().match(name_regexp) == null) {
-    //                var error_text = $(".middlename_error_text").text();
-    //                elem_result.html(error_text);
-    //                elem.addClass("field_incorrect");
-    //            } else {
-    //                elem_result.html(checker);
-    //                elem.removeClass("field_incorrect");
-    //            }
-    //    } else {
-    //        elem_result.html("");
-    //        elem.removeClass("field_incorrect");
-    //    }
-    //};
-    //
-    //
-    //var validate_lastname = function () {
-    //    var elem = $(".lastname");
-    //    var value = $(".lastname").val();
-    //    $(".lastname").val(value.trim());
-    //    var string_length = value.trim().length;
-    //    var elem_result = $(".lastname").parent().parent().next();
-    //    if(string_length != 0) {
-    //            if (value.trim().match(lastname_regexp) == null) {
-    //                var error_text = $(".lastname_error_text").text();
-    //                elem_result.html(error_text);
-    //                elem.addClass("field_incorrect");
-    //            } else {
-    //                elem_result.html(checker);
-    //                elem.removeClass("field_incorrect");
-    //            }
-    //        } else {
-    //            elem_result.html("");
-    //            elem.removeClass("field_incorrect");
-    //    }
-    //};
-    //
-    //
-    //
-    //var validate_locality = function () {
-    //    var elem = $(".locality");
-    //    var value = $(".locality").val();
-    //    $(".locality").val(value.trim());
-    //    var string_length = value.trim().length;
-    //    var elem_result = $(".locality").parent().parent().next();
-    //    if(string_length != 0) {
-    //            if (value.trim().match(locality_regexp) == null) {
-    //                var error_text = $(".locality_error_text").text();
-    //                elem_result.html(error_text);
-    //                elem.addClass("field_incorrect");
-    //            } else {
-    //                elem_result.html(checker);
-    //                elem.removeClass("field_incorrect");
-    //            }
-    //    } else {
-    //        elem_result.html("");
-    //        elem.removeClass("field_incorrect");
-    //    }
-    //};
-
-
-
-
     var validate_my_review = function (check_zero) {
         var elem = $(".my_review");
-        var value = $(".my_review").val();
-        $(".my_review").val(value.trim());
+        var value = elem.val();
         var string_length = value.trim().length;
-        var elem_result = $(".my_review").parent().parent().next();
+        var elem_result = elem.parent().parent().next();
         if (check_zero) {
             if (value.trim().match(my_review_regexp) == null) {
                 var error_text = $(".my_review_error_text").text();
@@ -154,23 +80,11 @@ $(document).ready(function(){
     $(".firstname").on("keyup change", function () {
         validate_firstname(true);
     });
-    //$(".middlename").on("keyup change", function () {
-    //    validate_middlename();
-    //});
-    //$(".lastname").on("keyup change", function () {
-    //    validate_lastname();
-    //});
-    //$(".locality").on("keyup change", function () {
-    //    validate_locality();
-    //});
     $(".my_review").on("keyup change", function () {
         validate_my_review(true);
     });
 
     validate_firstname(false);
-    //validate_middlename();
-    //validate_lastname();
-    //validate_locality();
     validate_my_review(false);
 
     $("[name=review_form]").submit(function () {

@@ -63,17 +63,17 @@ $this->registerJsFile('../js/request_call_form.js');
 						<form name="request_call_form" action="" method="post">
 							<div class="form_line_element">
 								<!--<div class="form_element_result_call_form"></div>-->
-								<div class="form_text">Имя <sup>*</sup></div>
+								<div class="form_text">Имя</div>
 								<div class="form_element"><input type="text" value="" name="firstname"
 								                                 class="firstname field_incorrect"></div>
 								<div class="form_element_result_call_form"></div>
 								<div class="firstname_error_text form_error_text">
-									Введите имя длиной от 2 до 32 символов на кириллице или латинице
+									Введите имя длиной от 2 до 32 символов
 								</div>
 							</div>
 
 							<div class="form_line_element">
-								<div class="form_text">Номер телефона<sup>*</sup></div>
+								<div class="form_text">Номер телефона</div>
 								<!--<div class="form_element_result_call_form"></div>-->
 								<div class="form_element"><input type="text" value="" name="phone"
 								                                 class="phone" placeholder="+7(XXX)XXX-XX-XX"></div>
@@ -84,7 +84,7 @@ $this->registerJsFile('../js/request_call_form.js');
 
 							</div>
 							<div class="form_line_element form_center ">
-								<input class="submit_request_call" type="submit" value="Отправить">
+								<input class="submit_form" type="submit" value="Отправить">
 
 							</div>
 						</form>
