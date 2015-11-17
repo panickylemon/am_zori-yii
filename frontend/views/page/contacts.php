@@ -61,9 +61,9 @@ $this->registerJsFile('../js/request_call_form.js');
 							в самое ближайшее время!
 						</div>
 						<form name="request_call_form" action="" method="post">
-							<div class="form_line_element">
+							<div class="form_line_element input_call_form">
 								<!--<div class="form_element_result_call_form"></div>-->
-								<div class="form_text">Имя</div>
+								<div class="form_text ">Имя</div>
 								<div class="form_element"><input type="text" value="" name="firstname"
 								                                 class="firstname field_incorrect"></div>
 								<div class="form_element_result_call_form"></div>
@@ -72,7 +72,7 @@ $this->registerJsFile('../js/request_call_form.js');
 								</div>
 							</div>
 
-							<div class="form_line_element">
+							<div class="form_line_element ">
 								<div class="form_text">Номер телефона</div>
 								<!--<div class="form_element_result_call_form"></div>-->
 								<div class="form_element"><input type="text" value="" name="phone"
