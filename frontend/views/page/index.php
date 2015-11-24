@@ -2,6 +2,7 @@
 
 use frontend\assets\SliderAsset;
 
+
 $this->title = 'Амурские зори';
 
 SliderAsset::register($this); ?>
@@ -31,6 +32,7 @@ SliderAsset::register($this); ?>
 		});
 	});
 </script>
+
 
 
 <ul class="bxslider">

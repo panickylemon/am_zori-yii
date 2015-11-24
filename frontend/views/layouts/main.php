@@ -17,7 +17,7 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
+    <meta charset="<?= Yii::$app->charset ?>" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
@@ -44,9 +44,20 @@ AppAsset::register($this);
                         <div><?= Html::a('Контакты', ['page/contacts']) ?></div>
                 </ul>
             </div>
+
+            <div class="menu_burger">
+                <div><a href="<?= Url::toRoute(['page/index']) ?>"><img src="../pictures/menu55.png" alt="меню"
+                                                                        class="burger"></a></div>
+            </div>
+
         </div>
     </div>
+
 </div>
+
+
+<div class="menu_hidden"></div>
+
 
 <div class="wrapper">
        <?= $content ?>
