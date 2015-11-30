@@ -36,7 +36,7 @@ use yii\helpers\Html;
 		</div>
 
 		<div class="village">
-			<div class="left"><a href="#">
+			<div class="left_village"><a href="#">
 					<div class="box_back_village">
 						<img src="../pictures/bac_village1.png">
 					</div>
@@ -45,7 +45,7 @@ use yii\helpers\Html;
 					</div>
 				</a>
 			</div>
-			<div class="right">
+			<div class="right_village">
 				<div>
 					<h2><?= Html::a('Земляничные поляны', ['page/village_1']) ?></h2>
 
@@ -68,7 +68,7 @@ use yii\helpers\Html;
 		</div>
 
 		<div class="village">
-			<div class="left"><a href="#">
+			<div class="left_village"><a href="#">
 					<div class="box_back_village">
 						<img src="../pictures/bac_village2.png">
 					</div>
@@ -77,7 +77,7 @@ use yii\helpers\Html;
 					</div>
 				</a>
 			</div>
-			<div class="right">
+			<div class="right_village">
 				<div><h2><a href="#">Рощинская слобода</a></h2>
 
 					<div>Клубный посёлок комфорт-класса с авторским ландшафтным дизайном общественной зоны на самой
@@ -103,7 +103,7 @@ use yii\helpers\Html;
 
 
 		<div class="village">
-			<div class="left"><a href="#">
+			<div class="left_village"><a href="#">
 					<div class="box_back_village">
 						<img src="../pictures/bac_village3.png">
 					</div>
@@ -113,7 +113,7 @@ use yii\helpers\Html;
 				</a>
 			</div>
 
-			<div class="right">
+			<div class="right_village">
 				<div>
 					<h2><a href="#">Медовое</a></h2>
 

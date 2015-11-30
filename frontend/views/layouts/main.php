@@ -59,33 +59,33 @@ AppAsset::register($this);
 
 
 <div class="menu_hidden">
-	<ul id="navbar">
-		<li>
+
+		<div>
 			<a href="<?= Url::toRoute(['page/index']) ?>">
 				<div class="submenu">О компании</div>
 			</a>
-		</li>
-		<li>
+		</div>
+		<div>
 			<a href="<?= Url::toRoute(['page/village']) ?>">
 				<div class="submenu">Посёлки</div>
 			</a>
-		</li>
-		<li>
+		</div>
+		<div>
 			<a href="<?= Url::toRoute(['selection/selection']) ?>">
 				<div class="submenu">Подбор участка</div>
 			</a>
-		</li>
-		<li>
+		</div>
+		<div>
 			<a href="<?= Url::toRoute(['page/how_buy']) ?>">
 				<div class="submenu">Как купить</div>
 			</a>
-		</li>
-		<li>
+		</div>
+		<div>
 			<a href="<?= Url::toRoute(['page/contacts']) ?>">
 				<div class="submenu">Контакты</div>
 			</a>
-		</li>
-	</ul>
+		</div>
+
 </div>
 
 
@@ -97,15 +97,25 @@ AppAsset::register($this);
 <div class="footer">
 	<div class="footer_content">
 		<div class="box_footer">
-			<a href="village.html">Выбери свой райский <br>уголок</a>
+			<a href="<?= Url::toRoute(['page/village']) ?>">Выбери свой райский уголок</a>
 		</div>
 		<div class="box_footer">
-			<a href="selection.html">Построй дом своей <br>мечты</a>
+			<a href="<?= Url::toRoute(['selection/selection']) ?>">Построй дом своей мечты</a>
 		</div>
 		<div class="box_footer">
-			<a href="contacts.html">Ответим на все Ваши <br>вопросы</a>
+			<a href="<?= Url::toRoute(['page/contacts']) ?>">Ответим на все Ваши вопросы</a>
 		</div>
-
+	</div>
+	<div class="footer_responsive">
+		<div class="first_a_footer">
+			<a href="<?= Url::toRoute(['page/village']) ?>">Выбрать посёлок</a>
+		</div>
+		<div class="">
+			<a href="<?= Url::toRoute(['selection/selection']) ?>">Выбрать участок</a>
+		</div>
+		<div class="">
+			<a href="<?= Url::toRoute(['page/contacts']) ?>">Контакты</a>
+		</div>
 	</div>
 </div>
 
