@@ -15,7 +15,7 @@ RangeAsset::register($this);
 
 <script>
 	$(function () {
-		$("#range").ionRangeSlider({
+		$(".range").ionRangeSlider({
 			hide_min_max: true,
 			keyboard: true,
 			min: 100,
@@ -27,7 +27,7 @@ RangeAsset::register($this);
 			grid: true
 		});
 
-		$("#range").on("change", function () {
+		$(".range").on("change", function () {
 			var $this = $(this),
 				from = $this.data("from"),
 				to = $this.data("to");
@@ -39,7 +39,7 @@ RangeAsset::register($this);
 
 <script>
 	$(function () {
-		$("#range2").ionRangeSlider({
+		$(".range2").ionRangeSlider({
 			hide_min_max: true,
 			keyboard: true,
 			min: 4,
@@ -52,7 +52,7 @@ RangeAsset::register($this);
 
 		});
 
-		$("#range2").on("change", function () {
+		$(".range2").on("change", function () {
 			var $this = $(this),
 				from = $this.data("from"),
 				to = $this.data("to");
@@ -61,6 +61,25 @@ RangeAsset::register($this);
 		});
 
 	});
+</script>
+
+<script>
+	$(document).ready(function () {
+		$(".filter_box_responsive").click(function () {
+			$(".hidden_search").slideToggle("slow");
+			$(this).toggleClass("active");
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	function windowSize() {
+		if ($(window).width() >= '783') {
+			$('.hidden_search').hide();
+		}
+	}
+
+	$(window).on('load resize', windowSize);
 </script>
 
 
@@ -76,6 +95,96 @@ RangeAsset::register($this);
 
 		<div class="selection_layout">
 
+			<div class="filter_box_responsive">
+				<input type="button" value="Поиск по характерисктикам" class="">
+			</div>
+			<div class="hidden_search">
+				<form method="get">
+					<div class="block_for_align">
+						<div class="filter_elements"><p>Посёлки</p>
+							<div class="filter_village">
+
+								<?php $villages = ArrayHelper::map(Village::find()->all(), 'id',
+									'name') ?>
+								<?= Html::checkboxList('village_id', $village, $villages, ['itemOptions' => ['class' =>
+									'selection_checkbox']]) ?>
+
+							</div>
+						</div>
+
+						<div class="filter_elements price_range"><p>Цена, тыс.руб.</p>
+							<input type="text" class="range" value="" name="price">
+
+							<div class="count_range_box">
+								<input type="text" class="size-from count_range" value="<?= $prices[0] ?>">-
+								<input type="text" class="size-to count_range" value="<?= $prices[1] ?>">
+							</div>
+						</div>
+
+						<div class="filter_elements"><p>Статус</p>
+							<div class="filter_village">
+								<input type="checkbox" name="is_sold[]" value="1"
+									<?php if (in_array('1', $status)) {
+										echo "checked";
+									} ?>
+									> Продан<br>
+
+								<input type="checkbox" name="is_sold[]" value="0"
+									<?php if (in_array('0', $status)) {
+										echo "checked";
+									} ?>
+									> В продаже<br>
+							</div>
+						</div>
+
+						<div class="filter_elements"><p>Наличие дома</p>
+							<div class="filter_village">
+								<input type="checkbox" name="is_house[]" value="1"
+									<?php if (in_array('1', $house)) {
+										echo "checked";
+									} ?>
+									> Участок с домом<br>
+
+								<input type="checkbox" name="is_house[]" value="0"
+									<?php if (in_array('0', $house)) {
+										echo "checked";
+									} ?>
+									> Участок без дома<br>
+							</div>
+						</div>
+
+						<div class="filter_elements price_range"><p>Размер участка, соток</p>
+							<input type="text" class="range2" value="" name="size">
+
+							<div class="count_range_box">
+								<input type="text" class="size-from2 count_range" value="<?= $sizes[0] ?>">-
+								<input type="text" class="size-to2 count_range" value="<?= $sizes[1] ?>">
+							</div>
+						</div>
+
+						<div class="filter_elements"><p>Дата сдачи</p>
+							<div class="filter_village">
+
+								<?php $readys = ArrayHelper::map(DateReadyDistrict::find()->all(), 'id',
+									'date') ?>
+								<?= Html::checkboxList('date_ready', $ready, $readys, ['itemOptions' => ['class' =>
+									'selection_checkbox']]) ?>
+
+								<!--							<input type="checkbox" name="date_delivery" value="2014" checked>до 2014 (уже сдан)<br>-->
+								<!--							<input type="checkbox" name="date_delivery" value="2015">до осени 2015<br>-->
+								<!--							<input type="checkbox" name="date_delivery" value="2016">до осени 2016<br>-->
+							</div>
+						</div>
+					</div>
+					<div class="submit_selection">
+						<button class="submit_form" type="submit">Найти</button>
+					</div>
+
+				</form>
+
+
+			</div>
+
 			<div class="filter_box">
 				<h4>Поиск по характеристикам</h4>
 
@@ -86,14 +195,14 @@ RangeAsset::register($this);
 
 							<?php $villages = ArrayHelper::map(Village::find()->all(), 'id',
 								'name') ?>
-							<?= Html::checkboxList('village_id', $village, $villages,['itemOptions'=>['class' =>
+							<?= Html::checkboxList('village_id', $village, $villages, ['itemOptions' => ['class' =>
 								'selection_checkbox']]) ?>
 
 						</div>
 					</div>
 
 					<div class="filter_elements price_range">Цена, тыс.руб.
-						<input type="text" id="range" value="" name="price">
+						<input type="text" class="range" value="" name="price">
 
 						<div class="count_range_box">
 							<input type="text" class="size-from count_range" value="<?= $prices[0] ?>">-
@@ -104,11 +213,15 @@ RangeAsset::register($this);
 					<div class="filter_elements">Статус
 						<div class="filter_village">
 							<input type="checkbox" name="is_sold[]" value="1"
-								<?php if (in_array('1', $status)){ echo "checked"; } ?>
+								<?php if (in_array('1', $status)) {
+									echo "checked";
+								} ?>
 								> Продан<br>
 
 							<input type="checkbox" name="is_sold[]" value="0"
-								<?php if (in_array('0', $status)){ echo "checked"; } ?>
+								<?php if (in_array('0', $status)) {
+									echo "checked";
+								} ?>
 								> В продаже<br>
 						</div>
 					</div>
@@ -116,17 +229,21 @@ RangeAsset::register($this);
 					<div class="filter_elements">Наличие дома
 						<div class="filter_village">
 							<input type="checkbox" name="is_house[]" value="1"
-								<?php if (in_array('1', $house)){echo "checked"; } ?>
+								<?php if (in_array('1', $house)) {
+									echo "checked";
+								} ?>
 								> Участок с домом<br>
 
 							<input type="checkbox" name="is_house[]" value="0"
-								<?php if (in_array('0', $house)){echo "checked"; } ?>
+								<?php if (in_array('0', $house)) {
+									echo "checked";
+								} ?>
 								> Участок без дома<br>
 						</div>
 					</div>
 
 					<div class="filter_elements price_range">Размер участка, соток
-						<input type="text" id="range2" value="" name="size">
+						<input type="text" class="range2" value="" name="size">
 
 						<div class="count_range_box">
 							<input type="text" class="size-from2 count_range" value="<?= $sizes[0] ?>">-
@@ -139,12 +256,12 @@ RangeAsset::register($this);
 
 							<?php $readys = ArrayHelper::map(DateReadyDistrict::find()->all(), 'id',
 								'date') ?>
-							<?= Html::checkboxList('date_ready', $ready, $readys,['itemOptions'=>['class' =>
+							<?= Html::checkboxList('date_ready', $ready, $readys, ['itemOptions' => ['class' =>
 								'selection_checkbox']]) ?>
 
-<!--							<input type="checkbox" name="date_delivery" value="2014" checked>до 2014 (уже сдан)<br>-->
-<!--							<input type="checkbox" name="date_delivery" value="2015">до осени 2015<br>-->
-<!--							<input type="checkbox" name="date_delivery" value="2016">до осени 2016<br>-->
+							<!--							<input type="checkbox" name="date_delivery" value="2014" checked>до 2014 (уже сдан)<br>-->
+							<!--							<input type="checkbox" name="date_delivery" value="2015">до осени 2015<br>-->
+							<!--							<input type="checkbox" name="date_delivery" value="2016">до осени 2016<br>-->
 						</div>
 					</div>
 
@@ -167,24 +284,24 @@ RangeAsset::register($this);
 							<div class="discrict_description">
 
 								<p><b class="blue">Участок № <?= $district->number ?></b> в посёлке <?=
-										$district->village->name ?>
+									$district->village->name ?>
 
-								 <?php
+									<?php
 									if ($district->is_house) {
-										echo Html::img('../pictures/home78.png', ['alt' => 'home','class'
-										=>'icon_result']);
+										echo Html::img('../pictures/home78.png', ['alt' => 'home', 'class'
+										=> 'icon_result']);
 									} else {
 										echo " ";
 									}
 									?>
 
-								<?php
+									<?php
 									if ($district->is_sold) {
 										echo Html::img('../pictures/delete74.png', ['alt' => 'home', 'class'
-										=>'icon_result']);
+										=> 'icon_result']);
 									} else {
-										echo Html::img('../pictures/shopping212.png', ['alt' => 'home','class'
-										=>'icon_result']);
+										echo Html::img('../pictures/shopping212.png', ['alt' => 'home', 'class'
+										=> 'icon_result']);
 									}
 									?></p>
 
@@ -193,12 +310,12 @@ RangeAsset::register($this);
 								<p>Дата сдачи: <?= $district->dateReadyDistrict->date ?></p>
 
 								<p>Статус:<?php
-								if ($district->is_sold) {
-									echo " продан";
-								} else {
-									echo " в продаже";;
-								}
-								?></p>
+									if ($district->is_sold) {
+										echo " продан";
+									} else {
+										echo " в продаже";;
+									}
+									?></p>
 
 								<p>Наличие дома:<?php
 									if ($district->is_house) {

@@ -50,7 +50,6 @@ SliderAsset::register($this); ?>
 </script>
 
 
-
 <ul class="bxslider">
 	<div class="bxslider_main">
 		<li><img class="item" src="../pictures/image1.png">
@@ -68,7 +67,8 @@ SliderAsset::register($this); ?>
 			<div class="container_text_slider">
 				<h1>Pощинская слобода</h1>
 
-				<h2 class="bx_text">посёлок комфорт-класса с авторским ландшафтным дизайном общественной зоны на самой границе с
+				<h2 class="bx_text">посёлок комфорт-класса с авторским ландшафтным дизайном общественной зоны на самой
+					границе с
 					городом</h2>
 			</div>
 		</li>
@@ -77,7 +77,8 @@ SliderAsset::register($this); ?>
 			<div class="container_text_slider">
 				<h1>Медовое</h1>
 
-				<h2 class="bx_text">масштабный стилизованный проект в одном из самых экологически чистых районов, в 1 км от
+				<h2 class="bx_text">масштабный стилизованный проект в одном из самых экологически чистых районов, в 1 км
+					от
 					Орельского озера и песчаного карьера — прекрасного места для летнего купания</h2>
 			</div>
 		</li>
@@ -88,28 +89,35 @@ SliderAsset::register($this); ?>
 <div class="content">
 	<div class="content_layout">
 		<div class="icon_mainpage"><a href="<?= Url::toRoute(['page/village']) ?>">
-			<div class="box_icon_picture"><img class="pictire_icon" src="../pictures/icon_localization.png"></div>
-			<div class="box_text_icon">
-				<div class="text_icon_title">Выбрать посёлок</div>
-				<div class="subtext_icon">Коттеджные посёлки от эконом-класса до премиум-класса</div>
-			</div>
-		</div></a>
+				<div class="box_icon_picture"><img class="pictire_icon" src="../pictures/icon_localization.png"></div>
+				<div class="box_text_icon">
+					<div class="text_icon_title">Выбрать посёлок</div>
+					<div class="subtext_icon">Коттеджные посёлки от эконом-класса до премиум-класса</div>
+				</div>
+		</div>
+		</a>
 
 		<div class="icon_mainpage">
-			<a href="<?= Url::toRoute(['selection/selection']) ?>"><div class="box_icon_picture"><img class="pictire_icon" src="../pictures/icon_home.png"></div>
-			<div class="box_text_icon">
-				<div class="text_icon_title">Подобрать участок</div>
-				<div class="subtext_icon">Приобретите загородный участок и избавьтесь от городской суеты, шума и пыли</div>
-			</div>
-		</div></a>
+			<a href="<?= Url::toRoute(['selection/selection']) ?>">
+				<div class="box_icon_picture"><img class="pictire_icon" src="../pictures/icon_home.png"></div>
+				<div class="box_text_icon">
+					<div class="text_icon_title">Подобрать участок</div>
+					<div class="subtext_icon">Приобретите загородный участок и избавьтесь от городской суеты, шума и
+						пыли
+					</div>
+				</div>
+		</div>
+		</a>
 
 		<div class="icon_mainpage">
-			<a href="<?= Url::toRoute(['page/how_buy']) ?>"><div class="box_icon_picture"><img class="pictire_icon" src="../pictures/icon_wallet.png"></div>
-			<div class="box_text_icon">
-				<div class="text_icon_title">Как купить</div>
-				<div class="subtext_icon">Множество вариантов приобретения участка, а также скидки и акции</div>
-			</div>
-		</div></a>
+			<a href="<?= Url::toRoute(['page/how_buy']) ?>">
+				<div class="box_icon_picture"><img class="pictire_icon" src="../pictures/icon_wallet.png"></div>
+				<div class="box_text_icon">
+					<div class="text_icon_title">Как купить</div>
+					<div class="subtext_icon">Множество вариантов приобретения участка, а также скидки и акции</div>
+				</div>
+		</div>
+		</a>
 	</div>
 
 </div>
@@ -237,6 +245,7 @@ SliderAsset::register($this); ?>
 			<div class="link_to_galery"><a href="#"> Перейти в галерею >></a></div>
 		</div>
 	</div>
+
 </div>
 
 

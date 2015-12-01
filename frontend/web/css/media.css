@@ -160,7 +160,10 @@
 	.sidebar_responsive {
 		display: block;
 		padding-bottom: 30px;
+		float: left;
+
 	}
+
 }
 
 @media screen and (max-width: 600px) {
@@ -189,6 +192,7 @@
 	.wrapper {
 		margin-bottom: -70px;
 	}
+
 	.wrapper:after {
 		height: 70px;
 	}
@@ -225,6 +229,7 @@
 	.wrapper {
 		margin-bottom: -60px;
 	}
+
 	.wrapper:after {
 		height: 60px;
 	}
@@ -357,4 +362,143 @@
 	.content_layout_village {
 		font-size: 16px;
 	}
+}
+
+/*selection*/
+
+@media screen and (max-width: 1220px) {
+	.district_price {
+		display: none;
+	}
+
+	.price_hidden {
+		display: block;
+		margin-top: 10px;
+		font-size: 30px;
+		font-weight: bold;
+	}
+}
+
+@media screen and (max-width: 1130px) {
+	.filter_box {
+		margin-right: -190px;
+	}
+
+	.result_filter_box {
+		width: 99%;
+	}
+
+	.result {
+		margin-left: 190px;
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+	.filter_box {
+		margin-right: 0px;
+		display: none;
+	}
+
+	.result {
+		margin-left: 0px;
+	}
+
+	.result_filter_box {
+		width: 100%;
+	}
+
+	.filter_box_responsive {
+		display: block;
+		float: right;
+		margin-top: -35px;
+
+	}
+
+	.hidden_search {
+		background: white;
+		float: right;
+		border: 1px solid #9e9897;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+
+	.filter_elements {
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+		border: 0px solid #5692ce;
+		padding: 8px;
+		box-sizing: border-box;
+		height: 150px;
+		width: 190px;
+		vertical-align: top;
+
+	}
+
+	.filter_elements p {
+		text-align: center;
+		border-bottom: 1px solid #53a5e0;
+		margin-bottom: 2px;
+		font-size: 19px;
+	}
+
+	.block_for_align:after {
+		display: inline-block;
+		width: 100%;
+		content: "";
+	}
+
+	.submit_selection .submit_form {
+		margin-top: 0px;
+
+	}
+
+	.filter_village {
+		border: 0px solid #53a5e0;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.filter_elements {
+		min-width: 190px;
+		width: 49%;
+	}
+
+}
+
+@media screen and (max-width: 420px) {
+	.block_for_align {
+		text-align: center;
+	}
+
+	.filter_elements {
+		text-align: left;
+		margin-bottom: -45px;
+	}
+
+	.filter_elements:nth-child(2), .filter_elements:nth-child(5){
+		margin-bottom: -20px;
+	}
+.price_range input[type=number], input[type=text] {
+	margin: 0;
+}
+
+
+	.district_result {
+		text-align: center;
+	}
+
+	.district_photo {
+		float: none;
+	}
+
+	.discrict_description {
+		padding-top: 1px;
+		padding-left: 0px;
+
+	}
+
+
+
 }
