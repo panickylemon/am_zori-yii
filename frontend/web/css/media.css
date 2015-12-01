@@ -1,4 +1,11 @@
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 940px) {
+	.icon_mainpage:first-child {
+		margin-left: -20px;
+	}
+
+}
+
+@media screen and (max-width: 840px) {
 	.menu_block {
 		display: none;
 	}
@@ -67,23 +74,30 @@
 		width: 98%;
 		margin: auto;
 	}
+}
 
+@media screen and (max-width: 820px) {
 	.footer_content {
 		width: 100%;
 	}
 
 	.box_footer:first-child {
 	}
+
 }
 
-@media screen and (max-width: 815px) {
+@media screen and (max-width: 825px) {
 	.icon_mainpage {
 		padding: 4% 1%;
 		width: 32%;
 	}
+
+	.icon_mainpage:first-child {
+		margin-left: 10px;
+	}
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 775px) {
 	.icon_mainpage {
 		width: 100%;
 		padding: 1% 0%;
@@ -93,6 +107,7 @@
 	.icon_mainpage:first-child {
 		margin-top: -15px;
 		border-top: 1px solid #b1b1b1;
+		margin-left: 0px;
 	}
 
 	.icon_mainpage:hover {
@@ -170,8 +185,12 @@
 	.box_footer {
 		height: 70px;
 	}
+
 	.wrapper {
 		margin-bottom: -70px;
+	}
+	.wrapper:after {
+		height: 70px;
 	}
 }
 
@@ -202,8 +221,12 @@
 	.box_footer {
 		height: 60px;
 	}
+
 	.wrapper {
 		margin-bottom: -60px;
+	}
+	.wrapper:after {
+		height: 60px;
 	}
 
 	.footer_content {
@@ -225,7 +248,7 @@
 		margin-bottom: -2px;
 	}
 
-	.first_a_footer{
+	.first_a_footer {
 		margin-top: 7px;
 	}
 
@@ -271,11 +294,67 @@
 
 }
 
-
 /*village*/
-@media screen and (max-width: 835px){
+@media screen and (max-width: 910px) {
+	.village .left_village {
+		margin-right: -280px;
+	}
+
 	.village .right_village {
-		/*display: inline-block;*/
-		/*float: left;*/
+		width: 98%;
+		box-sizing: content-box;
+	}
+
+	.content_right_village {
+		margin-left: 280px;
+	}
+}
+
+@media screen and (max-width: 855px) {
+	.content_layout_village {
+		width: 98%;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.content_layout_village {
+		font-size: 18px;
+	}
+
+	.hidden_title_village {
+		display: none;
+	}
+
+	.title_responsive {
+		display: block;
+
+	}
+
+	.village .left_village {
+		width: 100%;
+		margin: auto;
+		float: none;
+		min-width: 100px;
+		max-width: 400px;
+	}
+
+	.content_right_village {
+		float: none;
+		margin-left: 0;
+	}
+
+	.page_village img {
+		min-width: 100px;
+	}
+
+	.box_back_village img {
+		min-width: 100px;
+
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.content_layout_village {
+		font-size: 16px;
 	}
 }

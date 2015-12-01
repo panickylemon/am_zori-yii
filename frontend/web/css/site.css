@@ -277,8 +277,6 @@ body {
 	color: #525252;
 }
 
-
-
 .icon_mainpage a:hover {;
 	text-shadow: 3px 5px 5px #9f9f9f;
 }
@@ -382,6 +380,9 @@ body {
 	text-shadow: 1px 1px 3px #eaeaea;
 }
 
+
+/*village*/
+
 .content_village {
 	width: 100%;
 	border: 1px solid #EBEBEB;;
@@ -392,22 +393,19 @@ body {
 	padding-top: 15px;
 	width: 88%;
 	margin: auto;
-	min-height: 800px;
+	/*min-height: 800px;*/
 	font-size: 19px;
 	text-align: justify;
 	color: #525252;
-	min-width: 810px;
-
+	/*min-width: 810px;*/
 }
 
 .top_text_village {
 	text-indent: 20px;
 }
 
-
-/*village*/
-
 .village {
+
 	display: block;
 	padding-top: 4%;
 / / padding-right : 1 px;
@@ -419,13 +417,6 @@ body {
 	clear: both;
 	display: table;
 	height: 5px;
-}
-
-.village .right_village {
-	border: 1px solid red;
-	float: right;
-	width: 64%;
-	box-sizing: border-box;
 }
 
 .village h2 {
@@ -447,23 +438,32 @@ body {
 	text-shadow: 2px 2px 5px #9f9f9f;
 }
 
+.village .right_village {
+	border: 0px solid red;
+	float: right;
+	width: 64%;
+	box-sizing: border-box;
+}
+
 .village .left_village{
 	float: left;
 	width: 35%;
+	min-width: 280px;
 	box-sizing: border-box;
-	border: 1px solid #ca0a10;
+	border: 0px solid #ca0a10;
 	position: relative;
 }
 
 .village:last-child {
 	padding-bottom: 25px;
 }
+.title_responsive{display: none;}
 
 .page_village img {
 	position: relative;
 	max-width: 100%;
 	min-width: 280px;
-	min-height: 200px;
+	/*min-height: 200px;*/
 }
 
 .left_village img:hover {
@@ -475,7 +475,7 @@ body {
 	position: absolute;
 	max-width: 100%;
 	min-width: 280px;
-	min-height: 200px;
+	/*min-height: 200px;*/
 }
 
 a img {

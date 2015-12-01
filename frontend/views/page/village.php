@@ -2,6 +2,8 @@
 $this->title = 'Посёлки';
 
 use yii\helpers\Html;
+use yii\helpers\Url;
+
 ?>
 
 <div class="content_village">
@@ -36,7 +38,8 @@ use yii\helpers\Html;
 		</div>
 
 		<div class="village">
-			<div class="left_village"><a href="#">
+			<h2 class="title_responsive"><?= Html::a('Земляничные поляны', ['page/village_1']) ?></h2>
+			<div class="left_village"><a href="<?= Url::toRoute(['page/village_1']) ?>">
 					<div class="box_back_village">
 						<img src="../pictures/bac_village1.png">
 					</div>
@@ -46,8 +49,8 @@ use yii\helpers\Html;
 				</a>
 			</div>
 			<div class="right_village">
-				<div>
-					<h2><?= Html::a('Земляничные поляны', ['page/village_1']) ?></h2>
+				<div class="content_right_village">
+					<h2 class="hidden_title_village"><?= Html::a('Земляничные поляны', ['page/village_1']) ?></h2>
 
 					<div>Готовый коттеджный поселок в котором уже живут и активно строят свои дома более 120 семей,
 						оптимальный вариант приобретения жилья по экономичной цене.
@@ -68,6 +71,7 @@ use yii\helpers\Html;
 		</div>
 
 		<div class="village">
+			<h2 class="title_responsive"><a href="#">Рощинская слобода</a></h2>
 			<div class="left_village"><a href="#">
 					<div class="box_back_village">
 						<img src="../pictures/bac_village2.png">
@@ -78,7 +82,7 @@ use yii\helpers\Html;
 				</a>
 			</div>
 			<div class="right_village">
-				<div><h2><a href="#">Рощинская слобода</a></h2>
+				<div class="content_right_village"><h2 class="hidden_title_village"><a href="#">Рощинская слобода</a></h2>
 
 					<div>Клубный посёлок комфорт-класса с авторским ландшафтным дизайном общественной зоны на самой
 						границе с
@@ -103,6 +107,7 @@ use yii\helpers\Html;
 
 
 		<div class="village">
+			<h2 class="title_responsive"><a href="#">Медовое</a></h2>
 			<div class="left_village"><a href="#">
 					<div class="box_back_village">
 						<img src="../pictures/bac_village3.png">
@@ -114,8 +119,8 @@ use yii\helpers\Html;
 			</div>
 
 			<div class="right_village">
-				<div>
-					<h2><a href="#">Медовое</a></h2>
+				<div class="content_right_village">
+					<h2 class="hidden_title_village"><a href="#">Медовое</a></h2>
 
 					<div>Масштабный стилизованный проект в одном из самых экологически чистых районов, в 1 км от
 						Орельского озера и песчаного карьера. Дом в коттеджном поселке «Медовое» станет
