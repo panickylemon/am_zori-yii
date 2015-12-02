@@ -981,7 +981,9 @@ a img {
 	text-align: center;
 	padding-bottom: 10px;
 }
-
+.request_call_wrapper_responsive{
+	display: none;
+}
 .contacts_point_box:after {
 	content: '';
 	clear: both;

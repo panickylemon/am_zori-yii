@@ -668,17 +668,97 @@
 @media screen and (max-width: 1100px) {
 	.contacts_point_1 {
 		float: none;
-		/*width: 100%;*/
+		width: 100%;
 	}
 
 	.contacts_point_2 {
 		float: none;
 		padding: 0px;
-		/*width: 100%;*/
+		width: 100%;
 	}
 
 	.contacts {
-		min-width: 255px;
-		width: 30%;
+		min-width: 245px;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width:930px) {
+	.contacts {
+		width: 330px;
+		padding-left: 1%;
+	}
+
+	.request_call_wrapper {
+		width: 370px;
+	}
+	.request_call_wrapper .form_line_element input[type=text] {
+		width: 345px;
+	}
+
+}
+
+@media screen and (max-width:745px) {
+	.request_call_wrapper {
+		display: none;
+	}
+
+	.contacts {
+		width: 100%;
+		float: none;
+	}
+
+	.request_call_wrapper_responsive{
+		display: block;
+		width: 370px;
+		margin:0 auto 20px;
+
+	}
+
+	.request_call_wrapper_responsive h3{
+		text-align: center;
+	}
+}
+
+	.request_call_wrapper_responsive .form_line_element input[type=text] {
+		width: 345px;
+
+}
+
+@media screen and (max-width:500px) {
+	.request_call_wrapper_responsive .title_request_call_form{
+		font-size: 16px;
+	}
+
+}
+
+@media screen and (max-width:400px) {
+
+	.contacts {
+		min-width: 150px;
+	}
+
+	.request_call_wrapper_responsive{
+		width: 300px;
+	}
+
+	.request_call_wrapper_responsive .form_line_element input[type=text] {
+		width: 280px;
+
+	}
+}
+
+@media screen and (max-width:325px) {
+	.request_call_wrapper_responsive .title_request_call_form{
+	display: none;
+	}
+
+	.request_call_wrapper_responsive{
+		width: 250px;
+	}
+
+	.request_call_wrapper_responsive .form_line_element input[type=text] {
+		width: 230px;
+
 	}
 }
