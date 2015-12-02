@@ -31,6 +31,7 @@ UiaccordAsset::register($this);
 
 
 		<div class="layout_icons_buy">
+
 			<div class="icon_buy_box">
 				<div class="icon_buy">
 					<img src="../pictures/phone64.png">
@@ -61,7 +62,7 @@ UiaccordAsset::register($this);
 				<div class="icon_buy">
 					<img src="../pictures/marker19.png">
 				</div>
-				<div class="text_icon_buy">Выбрать участок в посёлке</div>
+				<div class="text_icon_buy">Выбрать участок <br>в посёлке</div>
 			</div>
 
 			<div class="icon_buy_box ">

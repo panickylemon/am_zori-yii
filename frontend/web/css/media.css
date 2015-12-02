@@ -392,6 +392,25 @@
 		margin-left: 190px;
 	}
 
+	.submit_filter_box_responsive {
+		width: 150px;
+		font-family: 'PT Sans Narrow', Arial, sans-serif;
+		font-weight: bold;
+		font-size: 18px;
+		color: #FFFFFF;
+		background: #53a5e0 url("../pictures/triangle3.png") 75% 55% no-repeat;
+		background-size: 8%;
+		border: 1px solid #B1D8F2;
+		border-radius: 3px;
+		letter-spacing: 1px;
+		text-shadow: 0px 1px 0px #707070;
+	}
+
+	.submit_filter_box_responsive:hover {
+		background: #5794d2 url("../pictures/triangle3.png") 76% 55% no-repeat;
+		background-size: 9%;
+	}
+
 }
 
 @media screen and (max-width: 800px) {
@@ -412,7 +431,6 @@
 		display: block;
 		float: right;
 		margin-top: -35px;
-
 	}
 
 	.hidden_search {
@@ -451,7 +469,6 @@
 
 	.submit_selection .submit_form {
 		margin-top: 0px;
-
 	}
 
 	.filter_village {
@@ -468,22 +485,42 @@
 }
 
 @media screen and (max-width: 420px) {
-	.block_for_align {
-		text-align: center;
-	}
 
 	.filter_elements {
 		text-align: left;
 		margin-bottom: -45px;
+		width: 100%;
+		padding: 0;
 	}
 
-	.filter_elements:nth-child(2), .filter_elements:nth-child(5){
+	.filter_elements .irs {
+		max-width: 200px;
+		text-align: center;
+		margin: auto;
+	}
+
+	.filter_elements:nth-child(2), .filter_elements:nth-child(5) {
 		margin-bottom: -20px;
 	}
-.price_range input[type=number], input[type=text] {
-	margin: 0;
-}
 
+	.filter_elements p {
+		border-bottom: 1px solid #8c8c8c;
+		border-top: 1px solid #8c8c8c;
+		margin-bottom: 2px;
+		background: #d6d6d6;
+	}
+
+	.filter_elements:first-child p {
+		border-top: 0px solid #8c8c8c;
+	}
+
+	.hidden_search {
+		padding: 0px;
+	}
+
+	.price_range input[type=number], input[type=text] {
+		margin: 0;
+	}
 
 	.district_result {
 		text-align: center;
@@ -496,9 +533,152 @@
 	.discrict_description {
 		padding-top: 1px;
 		padding-left: 0px;
+		font-size: 16px;
+	}
 
+	.price_hidden{
+		margin: 0;
+		font-size: 26px;
+	}
+
+	.submit_selection .submit_form {
+		margin-bottom: 10px;
 	}
 
 
+}
 
+@media screen and (max-width:340px) {
+	.submit_filter_box_responsive {
+		width: 85px;
+		background: #53a5e0 url("../pictures/triangle3.png") 90% 55% no-repeat;
+		background-size: 8%;
+	}
+	.submit_filter_box_responsive:hover {
+		background: #5794d2 url("../pictures/triangle3.png") 90% 55% no-repeat;
+		background-size: 8%;
+	}
+}
+
+@media screen and (max-width:265px) {
+	.filter_box_responsive {
+		display: block;
+		float: left;
+		margin-top: -10px;
+		margin-bottom: 5px;
+	}
+
+	.submit_filter_box_responsive {
+		width: 150px;
+		background: #53a5e0 url("../pictures/triangle3.png") 75% 55% no-repeat;
+		background-size: 8%;
+		margin: auto;
+	}
+
+	.submit_filter_box_responsive:hover {
+		background: #5794d2 url("../pictures/triangle3.png") 75% 55% no-repeat;
+		background-size: 8%;
+	}
+}
+
+
+/*how_buy*/
+
+@media screen and (max-width: 755px) {
+	.icon_buy_box {
+		width: 65px;
+	}
+
+	.icon_buy_box:last-child {
+		margin-bottom: 15px;
+	}
+
+	.layout_icons_buy {
+		width: 490px;
+	}
+
+}
+
+@media screen and (max-width: 510px) {
+	.title_buy img {
+		width: 250px;
+	}
+
+	.icon_buy_box img{
+		width: 60%;
+	}
+	.icon_buy_box:nth-child(2n) {
+		width: 30px;
+	}
+
+	.text_icon_buy{
+		font-size: 15px;
+	}
+
+    .icon_arrow{
+	    margin: 0px -15px 40px;
+    }
+
+	.icon_arrow img{
+		width: 35%;
+	}
+
+	.layout_icons_buy {
+		width: 380px;
+		margin: 5px auto;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+	.ui-accordion .ui-accordion-header{
+		font-size: 12px;
+	}
+	.ui-helper-reset{
+		font-size: 13px;
+	}
+}
+
+@media screen and (max-width: 395px) {
+	.text_icon_buy{
+		font-size: 14px;
+	}
+	.icon_buy_box {
+		margin: -7px;
+	}
+	.layout_icons_buy {
+		width: 275px;
+		margin: 15px auto;
+	}
+	.icon_buy_box:last-child {
+		margin-bottom: -5px;
+	}
+	.icon_buy_box:nth-child(5) {
+		margin-bottom: -20px;
+	}
+	.title_buy img {
+		margin-top: -10px;
+	}
+
+}
+
+
+/*contacts*/
+
+@media screen and (max-width: 1100px) {
+	.contacts_point_1 {
+		float: none;
+		/*width: 100%;*/
+	}
+
+	.contacts_point_2 {
+		float: none;
+		padding: 0px;
+		/*width: 100%;*/
+	}
+
+	.contacts {
+		min-width: 255px;
+		width: 30%;
+	}
 }

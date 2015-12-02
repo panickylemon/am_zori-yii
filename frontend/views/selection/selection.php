@@ -83,6 +83,7 @@ RangeAsset::register($this);
 </script>
 
 
+
 <div class="content_village">
 	<div class="content_layout_village">
 
@@ -96,7 +97,7 @@ RangeAsset::register($this);
 		<div class="selection_layout">
 
 			<div class="filter_box_responsive">
-				<input type="button" value="Поиск по характерисктикам" class="">
+				<input type="button" value="Поиск" class="submit_filter_box_responsive">
 			</div>
 			<div class="hidden_search">
 				<form method="get">
