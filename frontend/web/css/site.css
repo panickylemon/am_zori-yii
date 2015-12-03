@@ -882,7 +882,7 @@ a img {
 }
 
 .about_title2 {
-	font-size: 36px;
+	font-size: 38px;
 	text-align: right;
 	margin-right: 7%;
 }
@@ -896,15 +896,6 @@ a img {
 	margin-right: 7%;
 }
 
-@media screen and (max-width: 1150px) {
-	.about_icon_box {
-		padding: 10px 0px;
-	}
-
-	.right_box_about {
-		padding: 0px 40px;
-	}
-}
 
 .about_icon_box {
 	padding: 10px;
@@ -948,6 +939,10 @@ a img {
 
 .review_view_all a {
 	color: #0d1074;
+}
+
+.about_icon_responsive{
+	display: none;
 }
 
 /*contacts*/
