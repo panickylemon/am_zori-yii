@@ -14,6 +14,9 @@ html {
 
 body {
 	font-family: "PT Sans Narrow";
+	max-width: 1350px;
+	margin: auto;
+
 }
 
 .wrapper {
@@ -23,6 +26,8 @@ body {
 	height: 100%;
 	padding: 0;
 	position: relative;
+	border-left: 1px solid #dfdfdf;
+	border-right: 1px solid #dfdfdf;
 }
 
 .wrapper:after {
@@ -47,10 +52,14 @@ body {
 
 .header {
 	position: relative;
-	border: 0px solid black;
+	border-left: 1px solid #dfdfdf;
+	border-right: 1px solid #dfdfdf;
 	width: 100%;
 	min-width: 100px;
 	height: 70px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	/*box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);*/
 	/*-o-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);*/
 	/*-moz-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);*/
@@ -124,6 +133,10 @@ body {
 	text-align: center;
 	font-weight: 900;
 	font-size: 20px;
+}
+
+.menu li a:hover{
+	color: #53a5e0;
 }
 
 .footer {
@@ -249,6 +262,7 @@ body {
 	margin: auto;
 	border: 0px solid black;
 	position: relative;
+	max-width: 1350px;
 }
 
 .content_layout:after {
@@ -267,7 +281,6 @@ body {
 	-webkit-box-sizing: border-box;
 	width: 33%;
 	color: #525252;
-	box-sizing: border-box;
 	zoom: 1;
 	*display: inline;
 }
@@ -448,6 +461,8 @@ body {
 	width: 35%;
 	min-width: 280px;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	border: 0px solid #ca0a10;
 	position: relative;
 }
@@ -509,13 +524,14 @@ a img {
 	min-width: 200px;
 	text-indent: 10px;
 	padding-top: 10px;
-
+	border: 0px solid #ffc318;
 }
 
 .price {
 	text-indent: 10px;
 	padding-top: 10px;
 	min-width: 250px;
+	border: 0px solid #ffc318;
 }
 
 .left_block_tab_village {
@@ -605,6 +621,8 @@ a img {
 	border: 1px solid #9e9897;
 	float: left;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	padding: 10px;
 	background: #ffffff;
 }
@@ -617,6 +635,8 @@ a img {
 	width: 80%;
 	float: right;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
 .sorting_box {
@@ -626,6 +646,8 @@ a img {
 	padding: 10px;
 	padding-top: 20px;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	background: #ffffff;
 
 }
@@ -662,6 +684,8 @@ a img {
 
 .sort_group {
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	display: inline-block;
 	font-size: 18px;
 	width: 49%;
@@ -749,6 +773,8 @@ a img {
 	width: 100px;
 	border: 0px solid red;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	display: inline-block;
 	vertical-align: middle;
 	zoom: 1;
@@ -840,16 +866,19 @@ a img {
 	height: 400px;
 	float: left;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
 .right_box_about {
 	border: 0px solid #1a29ff;
 	min-height: 400px;
-	box-sizing: border-box;
 	font-size: 22px;
 	float: right;
 	width: 63%;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	padding: 0px 70px;
 }
 
@@ -1062,15 +1091,23 @@ a img {
 	/*height: 400px;*/
 	float: left;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	min-width: 225px;
 }
 
 .right_box_review {
 	border: 0px solid #1a29ff;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	font-size: 22px;
 	float: right;
 	width: 64%;
+	padding-left: 5px;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	line-height: 1.3;
 }
 
@@ -1093,7 +1130,9 @@ a img {
 	-webkit-box-shadow: 2px 2px 5px #cccccc;
 	-moz-box-shadow: 2px 2px 5px #cccccc;
 	box-shadow: 2px 2px 5px #cccccc;
-
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
 .review:after {
@@ -1183,6 +1222,9 @@ a img {
 	background: #ffffff;
 	border: 1px solid #53a5e0;
 	height: 25px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	width: 355px;
 	font-size: 16px;
 	color: black;
@@ -1206,7 +1248,7 @@ textarea {
 }
 
 .box_review {
-	margin: 60px auto;
+	margin: 50px auto;
 }
 
 .review_photo {

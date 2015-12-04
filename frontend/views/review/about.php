@@ -190,7 +190,7 @@ use yii\widgets\ActiveForm;
 
 						<div>
 							<?php foreach ($reviews as $review_entity): ?>
-								<div class="review corner_ie8">
+								<div class="review corner_ie8 rev_responsive_about">
 									<div class="date_review"><?= $review_entity->created ?></div>
 									<div class="signature_review"><?= $review_entity->firstname ?></div>
 									<div><?= $review_entity->review ?></div>

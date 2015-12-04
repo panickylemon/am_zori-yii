@@ -61,7 +61,7 @@ AppAsset::register($this);
 <div class="menu_hidden">
 
 		<div>
-			<a href="<?= Url::toRoute(['page/index']) ?>">
+			<a href="<?= Url::toRoute(['review/about']) ?>">
 				<div class="submenu">О компании</div>
 			</a>
 		</div>
