@@ -16,6 +16,7 @@ use yii\widgets\ActiveForm;
 				</ul>
 			</div>
 
+
 			<div class="about_page">
 
 				<div class="left_box_about about_first">
