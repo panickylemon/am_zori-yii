@@ -576,12 +576,15 @@ a img {
 	padding-left: 15px;
 }
 
-.third_tab img {
+.third_tab_scheme{
+	margin: auto;
+	width: 60%;
+}
+.third_tab_scheme img {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	width: 100%;
-	padding: 1% 2%;
 }
 
 .title_fourth_tab{
