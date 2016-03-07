@@ -49,7 +49,7 @@ AppAsset::register($this);
 
 
 			<div class="menu_burger">
-				<a href="#" onclick='$(".menu_hidden").slideToggle("slow");'><img src="../pictures/menu55.png"
+				<a href="#" onclick='$(".menu_hidden").slideToggle("slow");'><img src="/frontend/web/pictures/menu55.png"
 				                                                                  alt="меню" class="burger"></a>
 			</div>
 		</div>
