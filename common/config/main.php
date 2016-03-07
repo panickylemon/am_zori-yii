@@ -11,7 +11,7 @@ return [
     'modules' => [
         'debug' => [
             'class' => 'yii\debug\Module',
-            'allowedIPs' => ['*']
+            'allowedIPs' => ['127.0.0.1']
         ],
     ],
 ];
