@@ -558,6 +558,10 @@
 		background: #5794d2 url("../pictures/triangle3.png") 90% 55% no-repeat;
 		background-size: 8%;
 	}
+	.logo {
+		height: 25px;
+		margin-top: 10px;
+	}
 }
 
 @media screen and (max-width: 265px) {
