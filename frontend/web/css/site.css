@@ -19,6 +19,15 @@ body {
 
 }
 
+input[type="text"],input[type="password"],input[type="phone"], textarea{
+	-webkit-appearance: none;
+}
+
+input[type="radio"] {
+	-webkit-appearance: radio;
+}
+
+
 .wrapper {
 	min-height: 100%;
 	margin-bottom: -80px;
