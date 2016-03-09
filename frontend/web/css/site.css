@@ -495,6 +495,10 @@ a img {
 
 /*village_page*/
 
+.link_selection{
+	color: #464646;
+}
+
 .villageTab {
 	padding-bottom: 20px;
 }

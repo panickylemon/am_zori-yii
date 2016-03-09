@@ -74,8 +74,8 @@ use yii\helpers\Url;
 		</div>
 
 		<div class="village">
-			<h2 class="title_responsive"><a href="#">Рощинская слобода</a></h2>
-			<div class="left_village"><a href="#">
+			<h2 class="title_responsive"><?= Html::a('Рощинская слобода', ['page/village_2']) ?></h2>
+			<div class="left_village"><a href="<?= Url::toRoute(['page/village_2']) ?>">
 					<div class="box_back_village">
 						<img src="../pictures/bac_village2.png">
 					</div>
@@ -85,7 +85,7 @@ use yii\helpers\Url;
 				</a>
 			</div>
 			<div class="right_village">
-				<div class="content_right_village"><h2 class="hidden_title_village"><a href="#">Рощинская слобода</a></h2>
+				<div class="content_right_village"><h2 class="hidden_title_village"><?= Html::a('Рощинская слобода', ['page/village_2']) ?></h2>
 
 					<div>Клубный посёлок комфорт-класса с авторским ландшафтным дизайном общественной зоны на самой
 						границе с
@@ -110,8 +110,8 @@ use yii\helpers\Url;
 
 
 		<div class="village">
-			<h2 class="title_responsive"><a href="#">Медовое</a></h2>
-			<div class="left_village"><a href="#">
+			<h2 class="title_responsive"><?= Html::a('Медовое', ['page/village_3']) ?></h2>
+			<div class="left_village"><a href="<?= Url::toRoute(['page/village_3']) ?>">
 					<div class="box_back_village">
 						<img src="../pictures/bac_village3.png">
 					</div>
@@ -123,7 +123,7 @@ use yii\helpers\Url;
 
 			<div class="right_village">
 				<div class="content_right_village">
-					<h2 class="hidden_title_village"><a href="#">Медовое</a></h2>
+					<h2 class="hidden_title_village"><?= Html::a('Медовое', ['page/village_3']) ?></h2>
 
 					<div>Масштабный стилизованный проект в одном из самых экологически чистых районов, в 1 км от
 						Орельского озера и песчаного карьера. Дом в коттеджном поселке «Медовое» станет

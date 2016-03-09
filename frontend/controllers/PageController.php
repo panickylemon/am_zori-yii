@@ -96,5 +96,13 @@ class PageController extends Controller
         return $this->render('village_1');
     }
 
+    public function actionVillage_2()
+    {
+        return $this->render('village_2');
+    }
+    public function actionVillage_3()
+    {
+        return $this->render('village_3');
+    }
 
 }
