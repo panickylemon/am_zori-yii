@@ -41,13 +41,13 @@ use yii\helpers\Url;
 		</div>
 
 		<div class="village">
-			<h2 class="title_responsive"><?= Html::a('Земляничные поляны', ['page/village_1']) ?></h2>
+			<h2 class="title_responsive"><?= Html::a('c', ['page/village_1']) ?></h2>
 			<div class="left_village"><a href="<?= Url::toRoute(['page/village_1']) ?>">
 					<div class="box_back_village">
-						<img src="../pictures/bac_village1.png">
+						<img src="../pictures/bac_village1.png" alt="Земляничные поляны">
 					</div>
 					<div class="page_village">
-						<img src="../pictures/village1.png">
+						<img src="../pictures/village1.png" alt="Земляничные поляны">
 					</div>
 				</a>
 			</div>
@@ -77,10 +77,10 @@ use yii\helpers\Url;
 			<h2 class="title_responsive"><?= Html::a('Рощинская слобода', ['page/village_2']) ?></h2>
 			<div class="left_village"><a href="<?= Url::toRoute(['page/village_2']) ?>">
 					<div class="box_back_village">
-						<img src="../pictures/bac_village2.png">
+						<img src="../pictures/bac_village2.png" alt="Рощинская слобода">
 					</div>
 					<div class="page_village">
-						<img src="../pictures/village2.png">
+						<img src="../pictures/village2.png" alt="Рощинская слобода">
 					</div>
 				</a>
 			</div>
@@ -113,10 +113,10 @@ use yii\helpers\Url;
 			<h2 class="title_responsive"><?= Html::a('Медовое', ['page/village_3']) ?></h2>
 			<div class="left_village"><a href="<?= Url::toRoute(['page/village_3']) ?>">
 					<div class="box_back_village">
-						<img src="../pictures/bac_village3.png">
+						<img src="../pictures/bac_village3.png" alt="Медовое">
 					</div>
 					<div class="page_village">
-						<img src="../pictures/village3.png">
+						<img src="../pictures/village3.png" alt="Медовое">
 					</div>
 				</a>
 			</div>

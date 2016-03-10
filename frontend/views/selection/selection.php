@@ -279,7 +279,7 @@ RangeAsset::register($this);
 					<?php foreach ($districts as $district): ?>
 						<div class="district_result">
 							<div class="district_photo">
-								<img src="<?= $district->getThumburl2() ?>">
+								<img src="<?= $district->getThumburl2() ?>" alt="фото">
 							</div>
 
 							<div class="discrict_description">

@@ -80,13 +80,14 @@ IeAsset::register($this);
 
 		<div class="box_icon_village">
 			<div class="box_icon_picture_village_1"><img class="pictire_icon_village_1"
-			                                             src="../pictures/icon_localization.png"></div>
+			                                             src="../pictures/icon_localization.png" alt="расстояние от
+			                                             города"></div>
 			<div class="place">40 км от города</div>
 		</div>
 
 		<div class="box_icon_village">
 			<div class="box_icon_picture_village_1"><img class="pictire_icon_village_1"
-			                                             src="../pictures/icon_wallet.png"></div>
+			                                       src="../pictures/icon_wallet.png" alt="цена"></div>
 			<div class="price">от 250 000 руб. за участок</div>
 		</div>
 
@@ -116,70 +117,70 @@ IeAsset::register($this);
 											<li>
 												<a href="#">
 													<img src="../gallery/images/thumbs/tzp1.png"
-													     data-large="../gallery/images/zp1.png" alt="image01"
+													     data-large="../gallery/images/zp1.png" alt="галерея"
 													     data-description="Some description"/>
 												</a>
 											</li>
 											<li>
 												<a href="#">
 													<img src="../gallery/images/thumbs/tzp2.png"
-													     data-large="../gallery/images/zp2.png" alt="image02"
+													     data-large="../gallery/images/zp2.png" alt="галерея"
 													     data-description="Some description"/>
 												</a>
 											</li>
 											<li>
 												<a href="#">
 													<img src="../gallery/images/thumbs/tzp3.png"
-													     data-large="../gallery/images/zp3.png" alt="image02"
+													     data-large="../gallery/images/zp3.png" alt="галерея"
 													     data-description="Some description"/>
 												</a>
 											</li>
 											<li>
 												<a href="#">
 													<img src="../gallery/images/thumbs/tzp4.png"
-													     data-large="../gallery/images/zp4.png" alt="image02"
+													     data-large="../gallery/images/zp4.png" alt="галерея"
 													     data-description="Some description"/>
 												</a>
 											</li>
 											<li>
 												<a href="#">
 													<img src="../gallery/images/thumbs/tzp5.png"
-													     data-large="../gallery/images/zp5.png" alt="image02"
+													     data-large="../gallery/images/zp5.png" alt="галерея"
 													     data-description="Some description"/>
 												</a>
 											</li>
 											<li>
 												<a href="#">
 													<img src="../gallery/images/thumbs/tzp6.png"
-													     data-large="../gallery/images/zp6.png" alt="image02"
+													     data-large="../gallery/images/zp6.png" alt="галерея"
 													     data-description="Some description"/>
 												</a>
 											</li>
 											<li>
 												<a href="#">
 													<img src="../gallery/images/thumbs/tzp7.png"
-													     data-large="../gallery/images/zp7.png" alt="image02"
+													     data-large="../gallery/images/zp7.png" alt="галерея"
 													     data-description="Some description"/>
 												</a>
 											</li>
 											<li>
 												<a href="#">
 													<img src="../gallery/images/thumbs/tzp8.png"
-													     data-large="../gallery/images/zp8.png" alt="image02"
+													     data-large="../gallery/images/zp8.png" alt="галерея"
 													     data-description="Some description"/>
 												</a>
 											</li>
 											<li>
 												<a href="#">
 													<img src="../gallery/images/thumbs/tzp9.png"
-													     data-large="../gallery/images/zp9.png" alt="image02"
+													     data-large="../gallery/images/zp9.png" alt="галерея"
 													     data-description="Some description"/>
 												</a>
 											</li>
 											<li>
 												<a href="#">
 													<img src="../gallery/images/thumbs/tzp10.png"
-													     data-large="../gallery/images/zp10.png" alt="image02"
+													     data-large="../gallery/images/zp10.png" alt="галерея"
 													     data-description="Some description"/>
 												</a>
 											</li>
@@ -273,7 +274,7 @@ IeAsset::register($this);
 				<!--Third tab-->
 				<div class="third_tab">
 					<div class="third_tab_scheme">
-						<img src="../pictures/scheme1.png">
+						<img src="../pictures/scheme1.png" alt="схема проезда">
 					</div>
 				</div>
 
@@ -297,10 +298,10 @@ IeAsset::register($this);
 
 					</div>
 					<div class="img_fourth_tab">
-						<img src="../pictures/sector1.jpg">
+						<img src="../pictures/sector1.jpg" alt="участок">
 					</div>
 					<div class="img_fourth_tab">
-						<img src="../pictures/sector2.png">
+						<img src="../pictures/sector2.png" alt="участок">
 					</div>
 
 					<div class="title_fourth_tab">

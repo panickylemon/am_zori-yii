@@ -26,7 +26,7 @@ UiaccordAsset::register($this);
 		</div>
 
 		<div class="title_buy">
-			<img src="../pictures/title_buy2.png">
+			<img src="../pictures/title_buy2.png" alt="схема">
 		</div>
 
 
@@ -34,46 +34,46 @@ UiaccordAsset::register($this);
 
 			<div class="icon_buy_box">
 				<div class="icon_buy">
-					<img src="../pictures/phone64.png">
+					<img src="../pictures/phone64.png" alt="позвонить">
 				</div>
 				<div class="text_icon_buy">Позвонить <br> по телефону</div>
 			</div>
 
 			<div class="icon_buy_box ">
 				<div class="icon_buy icon_arrow">
-					<img src="../pictures/right11.png">
+					<img src="../pictures/right11.png" alt="далее">
 				</div>
 			</div>
 
 			<div class="icon_buy_box">
 				<div class="icon_buy">
-					<img src="../pictures/network57.png">
+					<img src="../pictures/network57.png" alt="записаться">
 				</div>
 				<div class="text_icon_buy">Записаться <br> на просмотр</div>
 			</div>
 
 			<div class="icon_buy_box ">
 				<div class="icon_buy icon_arrow">
-					<img src="../pictures/right11.png">
+					<img src="../pictures/right11.png" alt="далее">
 				</div>
 			</div>
 
 			<div class="icon_buy_box">
 				<div class="icon_buy">
-					<img src="../pictures/marker19.png">
+					<img src="../pictures/marker19.png" alt="выбрать участок">
 				</div>
 				<div class="text_icon_buy">Выбрать участок <br>в посёлке</div>
 			</div>
 
 			<div class="icon_buy_box ">
 				<div class="icon_buy icon_arrow">
-					<img src="../pictures/right11.png">
+					<img src="../pictures/right11.png" alt="далее">
 				</div>
 			</div>
 
 			<div class="icon_buy_box">
 				<div class="icon_buy">
-					<img src="../pictures/contract11.png">
+					<img src="../pictures/contract11.png" alt="заключить договор">
 				</div>
 				<div class="text_icon_buy">Заключить договор</div>
 			</div>

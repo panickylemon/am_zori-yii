@@ -62,7 +62,7 @@ use yii\widgets\ActiveForm;
 					<div class="about_line_icon">
 						<div class="about_icon_box left_icon_about">
 							<div class="about_icon">
-								<img src="../pictures/agreement2.png">
+								<img src="../pictures/agreement2.png" alt="Гибкость и простота сделки">
 							</div>
 							<div class="about_icon_text">Гибкость и простота сделки,
 								индивидуальный подход к каждому клиенту
@@ -71,7 +71,7 @@ use yii\widgets\ActiveForm;
 
 						<div class="about_icon_box right_icon_about">
 							<div class="about_icon ">
-								<img src="../pictures/circle39.png">
+								<img src="../pictures/circle39.png" alt="Уникальный товар">
 							</div>
 							<div class="about_icon_text">Уникальный товар, востребованный рынком,
 								широкая продуктовая линейка товара
@@ -82,7 +82,7 @@ use yii\widgets\ActiveForm;
 					<div class="about_line_icon">
 						<div class="about_icon_box left_icon_about">
 							<div class="about_icon">
-								<img src="../pictures/premium1.png">
+								<img src="../pictures/premium1.png" alt="надежность компании">
 							</div>
 							<div class="about_icon_text">Подтверждаем слова – делом, надежность компании с
 								успешной 7-ти летней историей и опытом реализации проектов застройки
@@ -91,7 +91,7 @@ use yii\widgets\ActiveForm;
 
 						<div class="about_icon_box right_icon_about">
 							<div class="about_icon">
-								<img src="../pictures/family24.png">
+								<img src="../pictures/family24.png" alt="дарим радость">
 							</div>
 							<div class="about_icon_text">Мы дарим радость нашим клиентам как в момент заключения
 								договора/сделки, так и в течение проживания в наших комплексах.
@@ -103,7 +103,7 @@ use yii\widgets\ActiveForm;
 
 							<div class="about_icon_box">
 								<div class="about_icon">
-									<img src="../pictures/agreement2.png">
+									<img src="../pictures/agreement2.png" alt="Гибкость и простота сделки">
 								</div>
 								<div class="about_icon_text">Гибкость и простота сделки,
 									индивидуальный подход к каждому клиенту
@@ -112,7 +112,7 @@ use yii\widgets\ActiveForm;
 
 							<div class="about_icon_box">
 								<div class="about_icon ">
-									<img src="../pictures/circle39.png">
+									<img src="../pictures/circle39.png" alt="Уникальный товар">
 								</div>
 								<div class="about_icon_text">Уникальный товар, востребованный рынком,
 									широкая продуктовая линейка товара
@@ -121,7 +121,7 @@ use yii\widgets\ActiveForm;
 
 							<div class="about_icon_box">
 								<div class="about_icon">
-									<img src="../pictures/premium1.png">
+									<img src="../pictures/premium1.png" alt="надежность компании">
 								</div>
 								<div class="about_icon_text">Подтверждаем слова – делом, надежность компании с
 									успешной 7-ти летней историей и опытом реализации проектов застройки
@@ -130,7 +130,7 @@ use yii\widgets\ActiveForm;
 
 							<div class="about_icon_box">
 								<div class="about_icon">
-									<img src="../pictures/family24.png">
+									<img src="../pictures/family24.png" alt="дарим радость">
 								</div>
 								<div class="about_icon_text">Мы дарим радость нашим клиентам как в момент заключения
 									договора/сделки, так и в течение проживания в наших комплексах.

@@ -24,7 +24,7 @@ $this->registerJsFile('../js/review_form.js');
 		<div class="about_page">
 
 			<div class="left_box_review review_img">
-				<img class="review_img" src="../pictures/garant.png">
+				<img class="review_img" src="../pictures/garant.png" alt="оставить отзыв">
 			</div>
 			<div class="right_box_review">
 				<p>Здесь Вы можете оставить отзывы о наших посёлках и воспользоваться отзывами других клиентов.</p>
@@ -49,7 +49,7 @@ $this->registerJsFile('../js/review_form.js');
 		<div class="box_review">
 			<?php foreach ($reviews as $review_entity): ?>
 				<div class="review corner_ie8">
-					<div class="review_photo"><img src="../pictures/noavatar.png"></div>
+					<div class="review_photo"><img src="../pictures/noavatar.png" alt="фото"></div>
 					<div class="review_text">
 						<div class="date_review"><?= $review_entity->created ?></div>
 						<div class="signature_review"><?= $review_entity->firstname ?></div>
