@@ -26,7 +26,7 @@ $(document).ready(function(){
                 elem_result.html(error_text);
                 elem.addClass("field_incorrect");
             } else {
-                elem_result.html(checker);
+                elem_result.html("");
                 elem.removeClass("field_incorrect");
             }
         } else {
@@ -36,7 +36,7 @@ $(document).ready(function(){
                     elem_result.html(error_text);
                     elem.addClass("field_incorrect");
                 } else {
-                    elem_result.html(checker);
+                    elem_result.html("");
                     elem.removeClass("field_incorrect");
                 }
             }
@@ -55,7 +55,7 @@ $(document).ready(function(){
                 elem_result.html(error_text);
                 elem.addClass("field_incorrect");
             } else {
-                elem_result.html(checker);
+                elem_result.html("");
                 elem.removeClass("field_incorrect");
             }
         } else {
@@ -65,7 +65,7 @@ $(document).ready(function(){
                     elem_result.html(error_text);
                     elem.addClass("field_incorrect");
                 } else {
-                    elem_result.html(checker);
+                    elem_result.html("");
                     elem.removeClass("field_incorrect");
                 }
             }
