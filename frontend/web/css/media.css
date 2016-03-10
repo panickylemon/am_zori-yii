@@ -708,7 +708,7 @@
 
 }
 
-@media screen and (max-width: 745px) {
+@media screen and (max-width: 750px) {
 	.request_call_wrapper {
 		display: none;
 	}
@@ -716,13 +716,6 @@
 	.contacts {
 		width: 100%;
 		float: none;
-	}
-
-	.request_call_wrapper_responsive {
-		display: block;
-		width: 370px;
-		margin: 0 auto 20px;
-
 	}
 
 	.request_call_wrapper_responsive h3 {
@@ -803,6 +796,9 @@
 
 	.right_box_about {
 		padding: 0px 0px 0px 30px;
+	}
+	.form_review_wrapper{
+		margin: 80px auto 30px;
 	}
 
 }

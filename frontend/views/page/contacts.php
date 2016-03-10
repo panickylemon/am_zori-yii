@@ -60,7 +60,7 @@ $this->registerJsFile('../js/request_call_form.js');
 						<div class="title_request_call_form">Пожалуйста, укажите Ваше имя и телефон и мы перезвоним Вам
 							в самое ближайшее время!
 						</div>
-						<form name="request_call_form" action="" method="post">
+						<form name="request_call_form" action="" method="get">
 							<div class="form_line_element input_call_form">
 								<!--<div class="form_element_result_call_form"></div>-->
 								<div class="form_text ">Имя</div>
@@ -94,38 +94,6 @@ $this->registerJsFile('../js/request_call_form.js');
 			</div>
 
 			<div class="map_office" id="map_office"></div>
-
-			<div class="request_call_wrapper_responsive">
-				<h3>Заказать обратный звонок</h3>
-
-				<div class="form_request_call_wrapper">
-					<div class="title_request_call_form">Пожалуйста, укажите Ваше имя и телефон и мы перезвоним Вам
-						в самое ближайшее время!
-					</div>
-					<form name="request_call_form" action="" method="post">
-						<div class="form_line_element input_call_form">
-							<!--<div class="form_element_result_call_form"></div>-->
-							<div class="form_text ">Имя</div>
-							<div class="form_element"><input type="text" value="" name="firstname"
-							                                 class="firstname field_incorrect"></div>
-							<div class="form_element_result_call_form"></div>
-						</div>
-
-						<div class="form_line_element ">
-							<div class="form_text">Номер телефона</div>
-							<!--<div class="form_element_result_call_form"></div>-->
-							<div class="form_element"><input type="text" value="" name="phone"
-							                                 class="phone" placeholder="+7(XXX)XXX-XX-XX"></div>
-							<div class="form_element_result_call_form"></div>
-						</div>
-						<div class="form_line_element form_center ">
-							<input class="submit_form" type="submit" value="Отправить">
-
-						</div>
-					</form>
-				</div>
-			</div>
-
 		</div>
 	</div>
 
