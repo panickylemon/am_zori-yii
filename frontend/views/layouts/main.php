@@ -17,6 +17,10 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
+	<meta name="description" content="Предлагаем купить загородные коттеджи — широкий выбор предложений в Амурской
+	области"	/>​
+	<meta name="keywords" content="коттедж, коттеджные посёлки, дом, купить коттедж" />
+
 	<meta charset="<?= Yii::$app->charset ?>" name="viewport"
 	      content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title><?= Html::encode($this->title) ?></title>
