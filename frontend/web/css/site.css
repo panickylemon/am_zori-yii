@@ -60,6 +60,7 @@ input[type="radio"] {
 }
 
 .header {
+	margin-top: -18px;
 	position: relative;
 	border-left: 1px solid #dfdfdf;
 	border-right: 1px solid #dfdfdf;
@@ -272,6 +273,10 @@ input[type="radio"] {
 	border: 0px solid black;
 	position: relative;
 	max-width: 1350px;
+}
+
+.village_property{
+	padding-left: 19px;
 }
 
 .content_layout:after {
