@@ -88,15 +88,17 @@ SliderAsset::register($this); ?>
 
 <div class="content">
 	<div class="content_layout">
-		<div class="icon_mainpage"><a href="<?= Url::toRoute(['page/village']) ?>">
+		<div class="icon_mainpage">
+			<a href="<?= Url::toRoute(['page/village']) ?>">
 				<div class="box_icon_picture"><img class="pictire_icon" src="../pictures/icon_localization.png"
 				                                   alt="выбрать поселок"></div>
 				<div class="box_text_icon">
 					<div class="text_icon_title">Выбрать посёлок</div>
 					<div class="subtext_icon">Коттеджные посёлки от эконом-класса до премиум-класса</div>
 				</div>
+			</a>
 		</div>
-		</a>
+
 
 		<div class="icon_mainpage">
 			<a href="<?= Url::toRoute(['selection/selection']) ?>">
