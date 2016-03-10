@@ -110,8 +110,9 @@ SliderAsset::register($this); ?>
 						пыли
 					</div>
 				</div>
+			</a>
 		</div>
-		</a>
+
 
 		<div class="icon_mainpage">
 			<a href="<?= Url::toRoute(['page/how_buy']) ?>">
@@ -121,8 +122,8 @@ SliderAsset::register($this); ?>
 					<div class="text_icon_title">Как купить</div>
 					<div class="subtext_icon">Множество вариантов приобретения участка, а также скидки и акции</div>
 				</div>
+			</a>
 		</div>
-		</a>
 	</div>
 
 </div>
@@ -144,8 +145,8 @@ SliderAsset::register($this); ?>
 			требовательному
 			Клиенту комплексный подход в области строительства и всех операций с недвижимостью.
 		</div>
-		<ul>5 причин купить недвижимость у нас:
-
+		<p class="five_reasons">5 причин купить недвижимость у нас:</p>
+		<ul>
 			<li>Лучшие цены</li>
 			<li>Хорошая транспортная доступность</li>
 			<li>Развитая инфраструктура</li>
