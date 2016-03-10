@@ -41,7 +41,7 @@ use yii\helpers\Url;
 		</div>
 
 		<div class="village">
-			<h2 class="title_responsive"><?= Html::a('c', ['page/village_1']) ?></h2>
+			<h2 class="title_responsive"><?= Html::a('Земляничные поляны', ['page/village_1']) ?></h2>
 			<div class="left_village"><a href="<?= Url::toRoute(['page/village_1']) ?>">
 					<div class="box_back_village">
 						<img src="../pictures/bac_village1.png" alt="Земляничные поляны">
