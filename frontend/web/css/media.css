@@ -699,7 +699,8 @@
 	}
 
 	.request_call_wrapper {
-		width: 370px;
+		max-width: 370px;
+		width: 100%;
 	}
 
 	.request_call_wrapper .form_line_element input[type=text] {
@@ -708,10 +709,30 @@
 
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 760px) {
 	.request_call_wrapper {
-		display: none;
+		/*display: none;*/
+		float: none;
+		padding-top: 20px;
 	}
+
+	.request_call_wrapper h3 {
+		text-align: left;
+		padding-bottom: 10px;
+		padding-left: 1%;
+	}
+
+	.request_call_wrapper .form_line_element input[type=text] {
+		width: 100%;
+	}
+
+	.form_request_call_wrapper .form_element {
+		width: 100%;
+	}
+
+	.form_request_call_wrapper .form_line_element {
+		width: 100%;}
+
 
 	.contacts {
 		width: 100%;
@@ -749,6 +770,11 @@
 		width: 280px;
 
 	}
+	.title_request_call_form{
+		display: none;
+	}
+
+
 }
 
 @media screen and (max-width: 325px) {
