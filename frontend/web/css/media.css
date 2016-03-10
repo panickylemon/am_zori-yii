@@ -739,14 +739,6 @@
 		float: none;
 	}
 
-	.request_call_wrapper_responsive h3 {
-		text-align: center;
-	}
-
-	.request_call_wrapper_responsive .form_line_element input[type=text] {
-		width: 345px;
-
-	}
 }
 
 @media screen and (max-width: 500px) {
@@ -762,14 +754,6 @@
 		min-width: 150px;
 	}
 
-	.request_call_wrapper_responsive {
-		width: 300px;
-	}
-
-	.request_call_wrapper_responsive .form_line_element input[type=text] {
-		width: 280px;
-
-	}
 	.title_request_call_form{
 		display: none;
 	}
@@ -777,20 +761,6 @@
 
 }
 
-@media screen and (max-width: 325px) {
-	.request_call_wrapper_responsive .title_request_call_form {
-		display: none;
-	}
-
-	.request_call_wrapper_responsive {
-		width: 250px;
-	}
-
-	.request_call_wrapper_responsive .form_line_element input[type=text] {
-		width: 230px;
-
-	}
-}
 
 /*about*/
 @media screen and (max-width: 1250px) {
