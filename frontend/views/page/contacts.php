@@ -109,9 +109,6 @@ $this->registerJsFile('../js/request_call_form.js');
 							<div class="form_element"><input type="text" value="" name="firstname"
 							                                 class="firstname field_incorrect"></div>
 							<div class="form_element_result_call_form"></div>
-							<div class="firstname_error_text form_error_text">
-								Введите имя длиной от 2 до 32 символов
-							</div>
 						</div>
 
 						<div class="form_line_element ">
@@ -120,10 +117,6 @@ $this->registerJsFile('../js/request_call_form.js');
 							<div class="form_element"><input type="text" value="" name="phone"
 							                                 class="phone" placeholder="+7(XXX)XXX-XX-XX"></div>
 							<div class="form_element_result_call_form"></div>
-							<div class="phone_error_text form_error_text">
-								Введите номер телефона в формате +7 (ХХХ) ХХХ-ХХ-ХХ
-							</div>
-
 						</div>
 						<div class="form_line_element form_center ">
 							<input class="submit_form" type="submit" value="Отправить">
