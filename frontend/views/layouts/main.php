@@ -23,8 +23,11 @@ AppAsset::register($this);
 	области">​
 	<meta name="keywords" content="коттедж, коттеджные посёлки, дом, купить коттедж">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<?php $this->head() ?>
+
 </head>
+
 <body>
 <?php $this->beginBody() ?>
 

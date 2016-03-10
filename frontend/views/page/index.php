@@ -50,8 +50,8 @@ SliderAsset::register($this); ?>
 </script>
 
 
-<ul class="bxslider">
-	<div class="bxslider_main">
+<div class="bxslider">
+	<ul class="bxslider_main">
 		<li><img class="item" src="../pictures/image1.png" alt="земляничные поляны">
 
 			<div class="container_text_slider">
@@ -82,8 +82,8 @@ SliderAsset::register($this); ?>
 					Орельского озера и песчаного карьера — прекрасного места для летнего купания</h2>
 			</div>
 		</li>
-	</div>
-</ul>
+	</ul>
+</div>
 
 
 <div class="content">
