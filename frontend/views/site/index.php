@@ -50,8 +50,8 @@ SliderAsset::register($this); ?>
 </script>
 
 
-<ul class="bxslider">
-    <div class="bxslider_main">
+<div class="bxslider">
+    <ul class="bxslider_main">
         <li><img class="item" src="/frontend/web/pictures/image1.png" alt="земляничные поляны">
 
             <div class="container_text_slider">
@@ -82,20 +82,22 @@ SliderAsset::register($this); ?>
                     Орельского озера и песчаного карьера — прекрасного места для летнего купания</h2>
             </div>
         </li>
-    </div>
-</ul>
+    </ul>
+</div>
 
 
 <div class="content">
     <div class="content_layout">
-        <div class="icon_mainpage"><a href="<?= Url::toRoute(['page/village']) ?>">
+        <div class="icon_mainpage">
+            <a href="<?= Url::toRoute(['page/village']) ?>">
                 <div class="box_icon_picture"><img class="pictire_icon" src="/frontend/web/pictures/icon_localization.png" alt="выбрать поселок"></div>
                 <div class="box_text_icon">
                     <div class="text_icon_title">Выбрать посёлок</div>
                     <div class="subtext_icon">Коттеджные посёлки от эконом-класса до премиум-класса</div>
                 </div>
+            </a>
         </div>
-        </a>
+
 
         <div class="icon_mainpage">
             <a href="<?= Url::toRoute(['selection/selection']) ?>">
@@ -107,8 +109,9 @@ SliderAsset::register($this); ?>
                         пыли
                     </div>
                 </div>
+            </a>
         </div>
-        </a>
+
 
         <div class="icon_mainpage">
             <a href="<?= Url::toRoute(['page/how_buy']) ?>">
@@ -117,8 +120,9 @@ SliderAsset::register($this); ?>
                     <div class="text_icon_title">Как купить</div>
                     <div class="subtext_icon">Множество вариантов приобретения участка, а также скидки и акции</div>
                 </div>
+            </a>
         </div>
-        </a>
+
     </div>
 
 </div>
