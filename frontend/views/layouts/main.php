@@ -19,9 +19,10 @@ AppAsset::register($this);
 <head>
 	<meta charset="<?= Yii::$app->charset ?>">
 	<title><?= Html::encode($this->title) ?></title>
-	<meta name="description" content="Предлагаем купить загородные коттеджи — широкий выбор предложений в Амурской
+	<meta name="description" itemprop="description" content="Предлагаем купить загородные коттеджи — широкий выбор предложений в Амурской
 	области">​
-	<meta name="keywords" content="коттедж, коттеджные посёлки, дом, купить коттедж">
+	<meta name="keywords" itemprop="keywords"  content="коттедж, коттеджные посёлки, дом,
+	купить коттедж">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<?php $this->head() ?>
