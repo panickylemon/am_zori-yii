@@ -180,7 +180,7 @@ SliderAsset::register($this); ?>
         <div class="bxslider bxslider2">
             <div class="slider_right">
 
-                <div><a href="#"><img class="item" src="/frontend/web/pictures/sale1.png"></a>
+                <div><a href="#"><img class="item" src="/frontend/web/pictures/sale1.png" alt="галерея"></a>
                 </div>
 
                 <div><a href="#"><img class="item" src="/frontend/web/pictures/sale2.png"></a>
