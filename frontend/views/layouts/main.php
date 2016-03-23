@@ -24,7 +24,7 @@ AppAsset::register($this);
 	<meta name="keywords" content="коттедж, коттеджные посёлки, дом,
 	купить коттедж">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href=../pictures/web.png" type="image/x-icon">
+	<link rel="icon" href="/web.png" type="image/x-icon">
 	<?php $this->head() ?>
 
 </head>
