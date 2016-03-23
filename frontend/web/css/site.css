@@ -12,8 +12,23 @@ html {
 	overflow-x: hidden;
 }
 
+
+@font-face {
+	font-family: "PTSansNarrow";
+	src: url("../fonts/ptsansnarrow.eot");
+	src: local('☺'),
+	url("../fonts/ptsansnarrow.eot?") format("embedded-opentype"),
+	url("../fonts/ptsansnarrow.woff") format("woff"),
+	url("../fonts/ptsansnarrow.woff2") format("woff2"),
+	url("../fonts/ptsansnarrow.ttf") format("truetype"),
+	url("../fonts/ptsansnarrow.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 body {
-	font-family: "PTSans";
+	font-family: "PTSansNarrow";
 	max-width: 1350px;
 	margin: auto;
 
@@ -46,18 +61,7 @@ input[type="radio"] {
 	height: 80px;
 }
 
-@font-face {
-	font-family: "PTSans";
-	url("../fonts/ptsansnarrow-webfont.eot"),
-	src: local('☺'),
-	url("../fonts/ptsansnarrow-webfont.eot") format("embedded-opentype"),
-	url("../fonts/ptsansnarrow-webfont.woff2") format("woff2"),
-	url("../fonts/ptsansnarrow-webfont.woff") format("woff"),
-	url("../fonts/ptsansnarrow-webfont.ttf") format("truetype"),
-	url("../fonts/ptsansnarrow-webfont.svg") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
+
 
 .header {
 	margin-top: -18px;
@@ -1100,7 +1104,7 @@ font-weight: bold;
 .submit_form {
 	width: 150px;
 	height: 30px;
-	font-family: 'PTSans', Arial, sans-serif;
+	font-family: "PTSansNarrow", Arial, sans-serif;
 	font-weight: bold;
 	font-size: 18px;
 	margin-top: 15px;
