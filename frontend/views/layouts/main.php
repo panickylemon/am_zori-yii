@@ -18,13 +18,12 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
 	<meta charset="<?= Yii::$app->charset ?>">
-	<title><?= Html::encode($this->title) ?></title>
 	<meta name="description" content="Предлагаем купить загородные коттеджи — широкий выбор предложений в Амурской
 	области">​
 	<meta name="keywords" content="коттедж, коттеджные посёлки, дом,
 	купить коттедж">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="/web.png" type="image/x-icon">
+	<title><?= Html::encode($this->title) ?></title>
 	<?php $this->head() ?>
 
 </head>
