@@ -1155,7 +1155,7 @@ font-weight: bold;
 	font-size: 22px;
 	float: right;
 	width: 64%;
-	padding-left: 5px;
+	padding: 0 5px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
