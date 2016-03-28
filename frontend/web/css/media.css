@@ -13,13 +13,12 @@
 	.menu_burger {
 		display: block;
 		float: right;
-		border: 0px solid red;
+		padding-right: 3px;
 	}
 
 	.container_text_slider {
 		width: 70%;
 		font-size: 12px;
-		/*padding: 5px 0px 10px 10px;*/
 		bottom: 25px;
 		left: 8%;
 	}
