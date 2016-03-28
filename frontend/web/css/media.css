@@ -923,6 +923,11 @@
 
 /*reviews*/
 
+@media screen and (max-width: 735px) {
+	.form_element_result {
+		width: 90px;
+	}
+}
 @media screen and (max-width: 680px) {
 
 	.left_box_review {
@@ -936,6 +941,13 @@
 
 	.right_box_review p {
 		margin-left: 225px;
+	}
+
+}
+
+@media screen and (max-width: 599px) {
+	.form_element_result {
+		display: none;
 	}
 }
 
