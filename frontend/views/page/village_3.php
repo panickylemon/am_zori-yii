@@ -281,9 +281,9 @@ IeAsset::register($this);
 						<p>Eu mucius eirmod vix, an iriure dolores est, impetus adolescens constituam quo ei.
 							Te mutat voluptatibus per, in purto consul noster eum, quo amet delicata et. Vix option eripuit oportere cu, autem ornatus impedit te per.
 							Suscipit disputando ius ne, eum postea referrentur in. Illud moderatius ne pri.</p>
-						<a href="<?= Url::toRoute(['selection/selection']) ?>" class="link_selection">
-							<p>Выбрать участок</p>
-						</a>
+<!--						<a href="--><?//= Url::toRoute(['selection/selection']) ?><!--" class="link_selection">-->
+<!--							<p>Выбрать участок</p>-->
+<!--						</a>-->
 
 					</div>
 					<div class="img_fourth_tab">

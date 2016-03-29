@@ -619,15 +619,15 @@ font-weight: bold;
 	margin-bottom: 5px;
 }
 
-.fourth_tab a{
-	text-decoration: none;
-}
+/*.fourth_tab a{*/
+	/*text-decoration: none;*/
+/*}*/
 
-.fourth_tab a p{
-	margin: 10px 0px;
-	color: #484848;
-	border-bottom: 1px solid #484848;
-}
+/*.fourth_tab a p{*/
+	/*margin: 10px 0px;*/
+	/*color: #484848;*/
+	/*border-bottom: 1px solid #484848;*/
+/*}*/
 
 .img_fourth_tab img{
 	width: 100%;
