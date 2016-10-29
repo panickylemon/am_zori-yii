@@ -414,6 +414,7 @@ input[type="radio"] {
 .content_layout_village {
 	padding-top: 15px;
 	width: 88%;
+	max-width: 1350px;
 	margin: auto;
 	font-size: 19px;
 	text-align: justify;
