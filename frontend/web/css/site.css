@@ -29,9 +29,7 @@ html {
 
 body {
 	font-family: "PTSansNarrow";
-	max-width: 1350px;
 	margin: auto;
-
 }
 
 input[type="text"],input[type="password"],input[type="phone"], textarea{
@@ -48,6 +46,8 @@ input[type="radio"] {
 	height: auto !important;
 	padding: 0;
 	position: relative;
+	max-width: 1350px;
+	margin: auto;
 }
 
 .wrapper:after {
