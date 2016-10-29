@@ -260,7 +260,7 @@ SliderAsset::register($this); ?>
 				<div><a href="#"><img class="item" src="../pictures/sale9.png" alt="галерея"></a>
 				</div>
 			</div>
-<!--			<div class="link_to_galery"><a href="#"> Перейти в галерею >></a></div>-->
+			<div class="link_to_galery"><a href="#"> Перейти в галерею >></a></div>
 		</div>
 	</div>
 
