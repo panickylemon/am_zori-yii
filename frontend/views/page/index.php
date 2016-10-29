@@ -227,7 +227,6 @@ SliderAsset::register($this); ?>
 				</div>
 			</div>
 		</div>
-		<!--		<div class="link_to_galery"><a href="#"> Перейти в галерею >></a></div>-->
 	</div>
 
 	<div class="sidebar_responsive">
