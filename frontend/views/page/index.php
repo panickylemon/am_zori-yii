@@ -52,14 +52,17 @@ SliderAsset::register($this); ?>
 
 <div class="bxslider">
 	<ul class="bxslider_main">
-		<li><img class="item" src="../pictures/image1.png" alt="земляничные поляны">
+		<li>
+			<!--			<img class="item" src="../pictures/image1.png" alt="земляничные поляны">-->
+			<div class="zzz">
+				<div class="container_text_slider">
+					<h1>Земляничные поляны</h1>
 
-			<div class="container_text_slider">
-				<h1>Земляничные поляны</h1>
-
-				<h2 class="bx_text">готовый коттеджный поселок в котором уже живут и активно строят свои дома более 120
-					семей,
-					оптимальный вариант приобретения жилья по экономичной цене</h2>
+					<h2 class="bx_text">готовый коттеджный поселок в котором уже живут и активно строят свои дома более
+						120
+						семей,
+						оптимальный вариант приобретения жилья по экономичной цене</h2>
+				</div>
 			</div>
 		</li>
 		<li><img class="item" src="../pictures/image2.png" alt="pощинская слобода">

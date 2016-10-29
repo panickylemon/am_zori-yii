@@ -61,7 +61,11 @@ input[type="radio"] {
 	height: 80px;
 }
 
-
+.zzz{
+	background-image: url("../pictures/image1.png");
+	width: 100%;
+	height: 820px;
+}
 
 .header {
 	/*margin-top: -18px;*/
