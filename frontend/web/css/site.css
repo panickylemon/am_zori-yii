@@ -45,7 +45,7 @@ input[type="radio"] {
 	height: auto !important;
 	padding: 0;
 	position: relative;
-	max-width: 1350px;
+	max-width: 1370px;
 	margin: 0 auto -80px;
 }
 
@@ -69,12 +69,11 @@ input[type="radio"] {
 
 .header_layout {
 	margin: auto;
-	padding: 13px 0px;
+	padding: 13px 0;
 	width: 88%;
 	max-width: 1350px;
 	min-width: 820px;
 	height: 70px;
-	border: 0px solid #ddd;
 	display: block;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -91,7 +90,6 @@ input[type="radio"] {
 	vertical-align: bottom;
 	height: 42px;
 	float: left;
-	border: 0px solid #3d3d3d;
 }
 
 .menu {
@@ -99,7 +97,7 @@ input[type="radio"] {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	display: block;
-	padding: 8px 0px;
+	padding: 8px 0;
 	position: relative;
 	float: right;
 
@@ -148,7 +146,6 @@ input[type="radio"] {
 }
 
 .breadcrumbs {
-	border: 0px solid red;
 	max-width: 1350px;
 	margin: auto;
 }
@@ -266,7 +263,6 @@ input[type="radio"] {
 	width: 88%;
 	min-width: 810px;
 	margin: auto;
-	border: 0px solid black;
 	position: relative;
 	max-width: 1350px;
 }
