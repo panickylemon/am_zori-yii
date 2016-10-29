@@ -48,8 +48,6 @@ input[type="radio"] {
 	height: auto !important;
 	padding: 0;
 	position: relative;
-	border-left: 1px solid #dfdfdf;
-	border-right: 1px solid #dfdfdf;
 }
 
 .wrapper:after {
@@ -62,8 +60,6 @@ input[type="radio"] {
 
 .header {
 	position: relative;
-	border-left: 1px solid #dfdfdf;
-	border-right: 1px solid #dfdfdf;
 	width: 100%;
 	min-width: 100px;
 	height: 70px;
