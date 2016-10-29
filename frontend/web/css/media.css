@@ -8,6 +8,21 @@
 		height: 820px;
 		background: url("../pictures/main-image-big-1.png") center;
 	}
+
+	.roshinskaya_sloboba_bg{
+		width: 100%;
+		max-width: 1920px;
+		height: 820px;
+		background: url("../pictures/main-image-big-2.png") center;
+	}
+
+	.medovoe_bg{
+		width: 100%;
+		max-width: 1920px;
+		height: 820px;
+		background: url("../pictures/main-image-big-3.png") center;
+	}
+
 	.wrapper {
 		max-width: 1920px;
 	}

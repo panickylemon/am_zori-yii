@@ -66,26 +66,34 @@ SliderAsset::register($this); ?>
 				</div>
 			</div>
 		</li>
-<!--		<li><img class="item image-slider" src="../pictures/image2.png" alt="pощинская слобода">-->
-<!---->
-<!--			<div class="container_text_slider zemlyanichnye_polyany_bg">-->
-<!--				<h1>Pощинская слобода</h1>-->
-<!---->
-<!--				<h2 class="bx_text">посёлок комфорт-класса с авторским ландшафтным дизайном общественной зоны на самой-->
-<!--					границе с-->
-<!--					городом</h2>-->
-<!--			</div>-->
-<!--		</li>-->
-<!--		<li><img class="item image-slider" src="../pictures/image3.png" alt="медовое">-->
-<!---->
-<!--			<div class="container_text_slider zemlyanichnye_polyany_bg">-->
-<!--				<h1>Медовое</h1>-->
-<!---->
-<!--				<h2 class="bx_text">масштабный стилизованный проект в одном из самых экологически чистых районов, в 1 км-->
-<!--					от-->
-<!--					Орельского озера и песчаного карьера — прекрасного места для летнего купания</h2>-->
-<!--			</div>-->
-<!--		</li>-->
+		<li>
+			<div class="roshinskaya_sloboba_bg">
+				<img class="item image-slider" src="../pictures/image2.png" alt="pощинская слобода">
+
+				<div class="container_text_slider zemlyanichnye_polyany_bg">
+					<h1>Pощинская слобода</h1>
+
+					<h2 class="bx_text">посёлок комфорт-класса с авторским ландшафтным дизайном общественной зоны на
+						самой
+						границе с
+						городом</h2>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="medovoe_bg">
+				<img class="item image-slider" src="../pictures/image3.png" alt="медовое">
+
+				<div class="container_text_slider zemlyanichnye_polyany_bg">
+					<h1>Медовое</h1>
+
+					<h2 class="bx_text">масштабный стилизованный проект в одном из самых экологически чистых районов, в
+						1 км
+						от
+						Орельского озера и песчаного карьера — прекрасного места для летнего купания</h2>
+				</div>
+			</div>
+		</li>
 	</ul>
 </div>
 
