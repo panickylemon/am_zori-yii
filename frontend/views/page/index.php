@@ -53,16 +53,15 @@ SliderAsset::register($this); ?>
 <div class="bxslider">
 	<ul class="bxslider_main">
 		<li>
-			<!--			<img class="item" src="../pictures/image1.png" alt="земляничные поляны">-->
-			<div class="zzz">
-				<div class="container_text_slider">
-					<h1>Земляничные поляны</h1>
+			<img class="item" src="../pictures/image1.png" alt="земляничные поляны">
 
-					<h2 class="bx_text">готовый коттеджный поселок в котором уже живут и активно строят свои дома более
-						120
-						семей,
-						оптимальный вариант приобретения жилья по экономичной цене</h2>
-				</div>
+			<div class="container_text_slider">
+				<h1>Земляничные поляны</h1>
+
+				<h2 class="bx_text">готовый коттеджный поселок в котором уже живут и активно строят свои дома более
+					120
+					семей,
+					оптимальный вариант приобретения жилья по экономичной цене</h2>
 			</div>
 		</li>
 		<li><img class="item" src="../pictures/image2.png" alt="pощинская слобода">
@@ -218,7 +217,7 @@ SliderAsset::register($this); ?>
 				</div>
 			</div>
 		</div>
-		<div class="link_to_galery"><a href="#"> Перейти в галерею >></a></div>
+		<!--		<div class="link_to_galery"><a href="#"> Перейти в галерею >></a></div>-->
 	</div>
 
 	<div class="sidebar_responsive">
