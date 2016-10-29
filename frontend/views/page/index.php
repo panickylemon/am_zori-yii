@@ -70,7 +70,7 @@ SliderAsset::register($this); ?>
 			<div class="roshinskaya_sloboba_bg">
 				<img class="item image-slider" src="../pictures/image2.png" alt="pощинская слобода">
 
-				<div class="container_text_slider zemlyanichnye_polyany_bg">
+				<div class="container_text_slider">
 					<h1>Pощинская слобода</h1>
 
 					<h2 class="bx_text">посёлок комфорт-класса с авторским ландшафтным дизайном общественной зоны на
@@ -84,7 +84,7 @@ SliderAsset::register($this); ?>
 			<div class="medovoe_bg">
 				<img class="item image-slider" src="../pictures/image3.png" alt="медовое">
 
-				<div class="container_text_slider zemlyanichnye_polyany_bg">
+				<div class="container_text_slider">
 					<h1>Медовое</h1>
 
 					<h2 class="bx_text">масштабный стилизованный проект в одном из самых экологически чистых районов, в
