@@ -339,6 +339,7 @@ input[type="radio"] {
 
 .main_content {
 	width: 88%;
+	max-width: 1350px;
 	position: relative;
 	margin: auto;
 }
