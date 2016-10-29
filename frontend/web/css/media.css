@@ -8,6 +8,9 @@
 		height: 820px;
 		background: url("../pictures/main-image-big-1.png") center;
 	}
+	.wrapper {
+		max-width: 1920px;
+	}
 }
 
 @media screen and (max-width: 940px) {
