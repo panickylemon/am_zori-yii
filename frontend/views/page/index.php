@@ -53,7 +53,7 @@ SliderAsset::register($this); ?>
 <div class="bxslider">
 	<ul class="bxslider_main">
 		<li>
-			<img class="item" src="../pictures/image1.png" alt="земляничные поляны">
+			<img class="item image-slider" src="../pictures/image1.png" alt="земляничные поляны">
 
 			<div class="container_text_slider zemlyanichnye_polyany_bg">
 				<h1>Земляничные поляны</h1>
@@ -64,7 +64,7 @@ SliderAsset::register($this); ?>
 					оптимальный вариант приобретения жилья по экономичной цене</h2>
 			</div>
 		</li>
-		<li><img class="item" src="../pictures/image2.png" alt="pощинская слобода">
+		<li><img class="item image-slider" src="../pictures/image2.png" alt="pощинская слобода">
 
 			<div class="container_text_slider zemlyanichnye_polyany_bg">
 				<h1>Pощинская слобода</h1>
@@ -74,7 +74,7 @@ SliderAsset::register($this); ?>
 					городом</h2>
 			</div>
 		</li>
-		<li><img class="item" src="../pictures/image3.png" alt="медовое">
+		<li><img class="item image-slider" src="../pictures/image3.png" alt="медовое">
 
 			<div class="container_text_slider zemlyanichnye_polyany_bg">
 				<h1>Медовое</h1>
