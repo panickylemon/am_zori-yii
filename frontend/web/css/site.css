@@ -42,12 +42,11 @@ input[type="radio"] {
 
 .wrapper {
 	min-height: 100%;
-	margin-bottom: -80px;
 	height: auto !important;
 	padding: 0;
 	position: relative;
 	max-width: 1350px;
-	margin: auto;
+	margin: 0 auto -80px;
 }
 
 .wrapper:after {
